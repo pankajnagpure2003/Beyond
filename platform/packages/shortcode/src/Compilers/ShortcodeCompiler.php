@@ -141,7 +141,13 @@ class ShortcodeCompiler
         $compiled = $this->compileShortcode($matches);
         $name = $compiled->getName();
 
-        if ($compiled->enable_lazy_loading === 'yes' && ! request()->expectsJson() && ! request()->has('visual_builder') && ! $this->shouldIgnoreLazyLoading($name)) {
+        $lazyLoadingEnabled = (bool) apply_filters(
+            'shortcode_enable_lazy_loading',
+            config('packages.shortcode.shortcode.enable_lazy_loading', false),
+            $name
+        );
+
+        if ($lazyLoadingEnabled && $compiled->enable_lazy_loading === 'yes' && ! request()->expectsJson() && ! request()->has('visual_builder') && ! $this->shouldIgnoreLazyLoading($name)) {
             add_filter(THEME_FRONT_FOOTER, function (?string $html) {
                 return $html . view('packages/shortcode::partials.lazy-loading-script')->render();
             }, 120);

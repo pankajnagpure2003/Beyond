@@ -28,4 +28,16 @@ return [
     'performance' => [
         'log_threshold' => env('SHORTCODE_PERFORMANCE_LOG_THRESHOLD', 0.5), // seconds
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Shortcode Lazy Loading
+    |--------------------------------------------------------------------------
+    |
+    | Controls whether shortcodes with enable_lazy_loading="yes" render empty
+    | loading placeholders or render their HTML directly. Default is false to
+    | prevent missing content and broken images.
+    |
+    */
+    'enable_lazy_loading' => env('SHORTCODE_ENABLE_LAZY_LOADING', false),
 ];
