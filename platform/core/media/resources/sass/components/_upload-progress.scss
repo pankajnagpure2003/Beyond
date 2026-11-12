@@ -1,0 +1,105 @@
+.rv-upload-progress {
+    box-shadow: 0 0 4px rgba(58, 85, 113, 0.3);
+    // Never wider than the viewport on a narrow window.
+    width: min(600px, calc(100vw - 24px));
+    z-index: 9999;
+    @include lib-css(transition, all 0.3s linear);
+
+    &.hide-the-pane {
+        @include lib-css(transform, translateX(100%));
+        @include opacity(0);
+    }
+
+    .close-pane {
+        right: 12px;
+        margin-top: -12px;
+        @include lib-css(transition, all 0.3s ease-in-out);
+
+        svg {
+            margin: 0;
+        }
+    }
+
+    // File cell: status glyph beside the name, with the reason stacked below it.
+    .rv-upload-file {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .rv-upload-file-icon {
+        flex-shrink: 0;
+        line-height: 1;
+        margin-top: 2px;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        &.rv-upload-file-icon--spin svg {
+            @include lib-css(animation, rv-upload-spin 0.8s linear infinite);
+        }
+    }
+
+    // min-width lets the name truncate instead of stretching the row.
+    .rv-upload-file-body {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        min-width: 0;
+    }
+
+    .file-name {
+        font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    // Clamp long messages (e.g. the allowed-types list) to two lines; the full
+    // text stays available through the title tooltip.
+    .file-error {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+
+    // Keeps "70 B" on one line and figures aligned across rows.
+    .rv-upload-size {
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .rv-upload-status-cell {
+        white-space: nowrap;
+
+        .file-status,
+        .progress-percent {
+            display: block;
+        }
+    }
+
+    .js-retry-upload {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    // A quiet severity accent so failed rows stand out when scanning the list.
+    .rv-upload-row--error > td:first-child {
+        @include lib-css(box-shadow, inset 3px 0 0 var(--bb-danger));
+    }
+}
+
+@keyframes rv-upload-spin {
+    to {
+        @include lib-css(transform, rotate(360deg));
+    }
+}

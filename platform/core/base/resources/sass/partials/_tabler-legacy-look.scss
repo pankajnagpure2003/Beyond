@@ -1,0 +1,88 @@
+// Tabler 1.4 styles that 1.5+ changed and that can't be restored through Sass
+// config in tabler.scss.
+
+// Tabler 1.6 draws the whole alert in its variant color; 1.4 used the body text
+// color and kept the variant color for the icon. Important alerts keep their
+// white text on the solid background.
+.alert:not(.alert-important) {
+    color: var(--bb-body-color);
+}
+
+// Tabler 1.5+ dims nav icons to 50% (70% in the sidebar) of the link color;
+// 1.4 drew them in the link color itself. Same selectors as Tabler's, so these
+// later rules win.
+.navbar-nav,
+.navbar-vertical[class*=navbar-expand] .navbar-nav {
+    --bb-nav-link-icon-color: currentColor;
+}
+
+// Tabler 1.5+ makes the active menu item (and the group holding it) medium
+// weight and rounds submenu items; 1.4 kept them regular and square. Selectors
+// match Tabler's specificity so these later rules win.
+.navbar .navbar-nav .nav-item.active > .nav-link,
+.navbar .navbar-collapse .dropdown-menu .dropdown-item.active,
+.navbar .navbar-collapse .dropdown-menu .dropdown-item:active,
+.navbar-vertical[class*=navbar-expand] .navbar-nav .nav-item.active > .nav-link,
+.navbar-vertical[class*=navbar-expand] .navbar-collapse .dropdown-menu .dropdown-item.active,
+.navbar-vertical[class*=navbar-expand] .navbar-collapse .dropdown-menu .dropdown-item:active {
+    font-weight: var(--bb-font-weight-normal);
+}
+
+.navbar .navbar-collapse .dropdown-menu .dropdown-item,
+.navbar-vertical[class*=navbar-expand] .navbar-collapse .dropdown-menu .dropdown-item {
+    border-radius: 0;
+}
+
+// Tabler 1.6 pins only empty badges (dots) to a nav link's corner and puts
+// badges with text inline. Our header icons show counts, so keep the 1.4
+// superscript counter, and keep sidebar badges 4px after the title.
+.navbar .navbar-nav .nav-link .badge {
+    position: absolute;
+    top: 0.375rem;
+    inset-inline-end: 0.375rem;
+    margin-inline-start: 0;
+    // --bb-dir already mirrors this in RTL, so rtlcss must not flip it again.
+    /*rtl:ignore*/
+    transform: translate(calc(50% * var(--bb-dir)), -50%);
+}
+
+.navbar-collapse .navbar-nav .nav-link .badge,
+.navbar-vertical[class*=navbar-expand] .navbar-collapse .navbar-nav .nav-link .badge {
+    position: unset !important;
+    margin-inline-start: 4px;
+    transform: none !important;
+}
+
+// Tabler 1.6 colors help text from the body text color; 1.4 used the secondary
+// color, which follows the admin "secondary color" setting.
+.form-hint {
+    color: var(--bb-secondary);
+}
+
+// Tabler 1.6 adds a 1rem end margin to .alert-icon. Our alerts already space the
+// icon with a flex gap, so the extra margin only pushed the text further in.
+.alert-icon {
+    margin-inline-end: 0;
+}
+
+// Tabler 1.6 dropped the border from .dropdown-menu (it still defines the
+// --bb-dropdown-border-* variables); 1.4 drew a 1px translucent border. Navbar
+// menus keep their more specific `border: none`.
+.dropdown-menu {
+    border: var(--bb-dropdown-border-width) solid var(--bb-dropdown-border-color);
+}
+
+// Tabler 1.6.1 bug: `.card-table tr td:first-child` rounds the top corners of the
+// edge cells in every row, not just the first, so row hover/highlight backgrounds
+// show a notch. Keep the rounding on the table's first row only.
+.card-table > :not(:first-child) tr > :is(td, th),
+.card-table > :first-child > tr:not(:first-child) > :is(td, th) {
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+}
+
+// Tabler 1.5+ leaves the toggle of the sidebar group that holds the current page
+// transparent ("emphasized, not filled"); 1.4 filled it like any active item.
+.navbar-vertical[class*=navbar-expand] .navbar-nav .nav-item.active > .nav-link.dropdown-toggle {
+    background: var(--bb-navbar-active-bg);
+}

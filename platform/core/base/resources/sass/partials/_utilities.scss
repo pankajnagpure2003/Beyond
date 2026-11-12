@@ -1,0 +1,28 @@
+// Responsive width utilities (w-{breakpoint}-{value}), e.g. `w-100 w-md-auto`.
+// Bootstrap only ships the non-responsive `w-*` classes; views such as the media
+// toolbar and the table filter rely on the breakpoint variants below.
+$bb-width-breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+$bb-width-values: (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto,
+);
+
+@each $breakpoint, $min-width in $bb-width-breakpoints {
+    @media (min-width: $min-width) {
+        @each $key, $value in $bb-width-values {
+            .w-#{$breakpoint}-#{$key} {
+                width: $value !important;
+            }
+        }
+    }
+}

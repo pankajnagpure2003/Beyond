@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory>tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory>tests/Feature</directory>
+        </testsuite>
+        <!--
+            Tests that ship next to the code they cover. Without these entries they are
+            never executed: `php artisan test` only runs the suites listed here, so ~220
+            tests sat dead in the repo - including the ones guarding PublicCacheControl.
+
+            platform/plugins/language and platform/plugins/language-advanced are left out
+            deliberately: 17 of their tests already fail against the test database (they
+            expect language rows and locale settings that are not seeded), which is a
+            pre-existing problem unrelated to wiring the rest in.
+        -->
+        <testsuite name="Platform">
+            <directory>platform/core/base/tests</directory>
+            <directory>platform/core/media/tests</directory>
+            <directory>platform/core/setting/tests</directory>
+            <directory>platform/packages/installer/tests</directory>
+            <directory>platform/packages/shortcode/tests</directory>
+            <directory>platform/packages/sitemap/tests</directory>
+            <directory>platform/packages/theme/tests</directory>
+            <directory>platform/plugins/blog/tests</directory>
+            <directory>platform/plugins/cookie-consent/tests</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory>app</directory>
+        </include>
+    </source>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="APP_MAINTENANCE_DRIVER" value="file"/>
+        <env name="BCRYPT_ROUNDS" value="4"/>
+        <env name="CACHE_STORE" value="array"/>
+        <env name="MAIL_MAILER" value="array"/>
+        <env name="PULSE_ENABLED" value="false"/>
+        <env name="QUEUE_CONNECTION" value="sync"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="TELESCOPE_ENABLED" value="false"/>
+    </php>
+</phpunit>

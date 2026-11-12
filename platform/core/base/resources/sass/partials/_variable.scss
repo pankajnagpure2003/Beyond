@@ -1,0 +1,28 @@
+// Admin color settings (inline vars from components/layouts/header.blade.php)
+// are light-mode colors. Tabler 1.5+ declares light and dark colors once on
+// :root with light-dark(), and derives other tokens from them there, so the
+// overrides keep a dark branch (Tabler's dark palette) instead of a plain value.
+:root {
+    --bb-font-sans-serif: var(--primary-font), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --bb-primary: var(--primary-color);
+    --bb-primary-rgb: var(--primary-color-rgb);
+    --bb-secondary: light-dark(var(--secondary-color), var(--bb-gray-400));
+    --bb-secondary-rgb: var(--secondary-color-rgb);
+    --bb-heading-color: var(--heading-color);
+    --bb-body-color: light-dark(var(--text-color), var(--bb-gray-200));
+    --bb-body-color-rgb: var(--text-color-rgb);
+    --bb-link-color: light-dark(var(--link-color), color-mix(in oklab, var(--bb-white) 40%, var(--bb-primary)));
+    --bb-link-color-rgb: var(--link-color-rgb);
+    --bb-link-hover-color: light-dark(var(--link-hover-color), color-mix(in oklab, var(--bb-white) 20%, var(--bb-link-color)));
+    --bb-link-hover-color-rgb: var(--link-hover-color-rgb);
+}
+
+// Values light-dark() can't carry: an unset heading color and deprecated RGB
+// triplets (Tabler's dark values; used by e.g. `.form-hint a`). The theme
+// attribute sits on <html>, the same element as :root, so these must be set here.
+[data-bs-theme=dark] {
+    --bb-heading-color: initial; // unset, so headings inherit the dark text color
+    --bb-body-color-rgb: 229, 231, 235;
+    --bb-link-color-rgb: 121, 170, 231;
+    --bb-link-hover-color-rgb: 148, 187, 237;
+}

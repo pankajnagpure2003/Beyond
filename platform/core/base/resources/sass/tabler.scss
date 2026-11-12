@@ -1,0 +1,47 @@
+// Tabler UI framework, compiled on its own and prepended to core.css
+// (see `prepend` in vite.build.mjs). Its custom properties come out bare
+// (`--primary`) and get the `bb-` prefix in the build, so the admin keeps
+// using `--bb-*`.
+@use '@tabler/core/scss/tabler' with (
+    $enable-negative-margins: true,
+    // Width the admin layout (_navbar.scss) is built around; Tabler 1.5+ defaults to 16rem.
+    $sidebar-width: 15rem,
+    // Keep the Tabler 1.4 sidebar items: full width, 40px tall (1.5+ insets them and makes them 44px).
+    $sidebar-inset: 0,
+    $sidebar-nav-padding-y: 0.5rem,
+    $sidebar-nav-padding-x: 1rem,
+    $sidebar-nav-icon-width: 1.25rem,
+    // Keep the Tabler 1.4 blue-tinted translucent borders (1.6 mixes them from the gray scale).
+    $border-color-translucent: rgba(4, 32, 69, 0.1),
+    $border-color-translucent-dark: rgba(72, 110, 149, 0.14),
+    // Keep Tabler 1.4 checkbox/radio borders: translucent (1.6 uses the solid input border).
+    $form-check-input-border: var(--border-width) var(--border-style) var(--border-color-translucent),
+    // Keep the Tabler 1.4 borderless hamburger button (1.5+ uses Bootstrap's padding).
+    $navbar-toggler-padding-y: 0,
+    $navbar-toggler-padding-x: 0,
+    // Keep the Tabler 1.4 shadows (1.5+ moved to a new xs-2xl/overlay scale).
+    $box-shadow: rgba(var(--body-color-rgb), 0.04) 0 2px 4px 0,
+    $box-shadow-border: inset 0 0 0 1px var(--border-color-translucent),
+    $box-shadow-input: 0 1px 1px rgba(var(--body-color-rgb), 0.06),
+    $box-shadow-card: 0 0 4px rgba(var(--body-color-rgb), 0.04),
+    $box-shadow-dropdown: (0 16px 24px 2px rgba(0, 0, 0, 0.07), 0 6px 30px 5px rgba(0, 0, 0, 0.06), 0 8px 10px -5px rgba(0, 0, 0, 0.1)),
+    $box-shadow-inset: 0 0 transparent,
+    // Keep the Tabler 1.4 tooltip padding (1.5+ narrowed it to spacer-2).
+    $tooltip-padding-x: var(--spacer-3),
+    // Keep Tabler 1.4 avatars: rounded squares (1.5+ makes every avatar a circle).
+    $avatar-border-radius: var(--border-radius),
+    // Keep the Tabler 1.4 card and list-group density (1.5+ uses 1.25rem).
+    $card-spacer-y: 1rem,
+    // Keep the Tabler 1.4 gray scale; 1.6 switched the default to neutral gray.
+    $gray-50: #f9fafb,
+    $gray-100: #f3f4f6,
+    $gray-200: #e5e7eb,
+    $gray-300: #d1d5db,
+    $gray-400: #9ca3af,
+    $gray-500: #6b7280,
+    $gray-600: #4b5563,
+    $gray-700: #374151,
+    $gray-800: #1f2937,
+    $gray-900: #111827,
+    $gray-950: #030712
+);
