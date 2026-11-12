@@ -181,6 +181,10 @@ class BaseServiceProvider extends ServiceProvider
 
     protected function configureIni(): void
     {
+        if ($this->app->runningInConsole()) {
+            return;
+        }
+
         static $memoryLimit = null;
         static $maxExecutionTime = null;
 
@@ -208,7 +212,7 @@ class BaseServiceProvider extends ServiceProvider
         }
 
         $configMaxExecutionTime = Arr::get($baseConfig, 'max_execution_time');
-        if ($maxExecutionTime < $configMaxExecutionTime) {
+        if ((int) $maxExecutionTime !== 0 && $maxExecutionTime < $configMaxExecutionTime) {
             BaseHelper::iniSet('max_execution_time', $configMaxExecutionTime);
         }
     }
