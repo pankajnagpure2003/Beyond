@@ -754,7 +754,7 @@ class TranslationSeeder extends BaseTranslationSeeder
             '[ecommerce-product-groups title="' . $t['trending_products'] . '" limit="8" tabs="all,featured,on-sale,trending,top-rated" enable_lazy_loading="yes"][/ecommerce-product-groups]' .
             '[ads style="1" key_1="UROL9F9ZZVAA" key_2="B30VDBKO7SBF" enable_lazy_loading="yes"][/ads]' .
             '[ecommerce-flash-sale style="1" title="' . $t['deal_of_the_day'] . '" flash_sale_id="1" limit="4" button_label="' . $t['view_all_deals'] . '" button_url="/products" enable_lazy_loading="yes"][/ecommerce-flash-sale]' .
-            '[ecommerce-products style="grid" category_ids="20" limit="12" with_sidebar="1" image="main/gadgets/gadget-girl.png" action_label="' . $t['more_products'] . '" ads_ids="3,4" enable_lazy_loading="yes"][/ecommerce-products]' .
+            '[ecommerce-products style="grid" category_ids="20" limit="12" with_sidebar="1" image="main/gadgets/electronics-products-thumbnail.png" action_label="' . $t['more_products'] . '" ads_ids="3,4" enable_lazy_loading="yes"][/ecommerce-products]' .
             '[ads style="4" key_1="B5ZA76ZWMWAE" key_2="F1LTQS976YPY" key_3="IHPZ2WBSYJUK" enable_lazy_loading="yes"][/ads]' .
             '[ecommerce-products style="slider" title="' . $t['new_arrivals'] . '" by="collection" collection_ids="1" limit="12" enable_lazy_loading="yes"][/ecommerce-products]' .
             '[ecommerce-product-groups style="columns" limit="3" tabs="on-sale,trending,top-rated" enable_lazy_loading="yes"][/ecommerce-product-groups]' .
@@ -1147,19 +1147,19 @@ class TranslationSeeder extends BaseTranslationSeeder
                 'name' => 'سلايدر الرئيسية',
                 'items' => [
                     [
-                        'title' => 'أفضل مجموعة أجهزة لوحية 2023',
+                        'title' => 'أفضل مجموعة أجهزة لوحية 2026',
                         'description' => 'عرض حصري <span>-35%</span> خصم هذا الأسبوع',
                         'subtitle' => 'يبدأ من <b>$274.00</b>',
                         'button_label' => 'تسوق الآن',
                     ],
                     [
-                        'title' => 'أفضل مجموعة حواسيب محمولة 2023',
+                        'title' => 'أفضل مجموعة حواسيب محمولة 2026',
                         'description' => 'عرض حصري <span>-10%</span> خصم هذا الأسبوع',
                         'subtitle' => 'يبدأ من <b>$999.00</b>',
                         'button_label' => 'تسوق الآن',
                     ],
                     [
-                        'title' => 'أفضل مجموعة هواتف 2023',
+                        'title' => 'أفضل مجموعة هواتف 2026',
                         'description' => 'عرض حصري <span>-10%</span> خصم هذا الأسبوع',
                         'subtitle' => 'يبدأ من <b>$999.00</b>',
                         'button_label' => 'تسوق الآن',
@@ -1170,19 +1170,19 @@ class TranslationSeeder extends BaseTranslationSeeder
                 'name' => 'Slider trang chủ',
                 'items' => [
                     [
-                        'title' => 'Bộ sưu tập máy tính bảng tốt nhất 2023',
+                        'title' => 'Bộ sưu tập máy tính bảng tốt nhất 2026',
                         'description' => 'Ưu đãi độc quyền <span>-35%</span> giảm giá tuần này',
                         'subtitle' => 'Giá từ <b>$274.00</b>',
                         'button_label' => 'Mua ngay',
                     ],
                     [
-                        'title' => 'Bộ sưu tập laptop tốt nhất 2023',
+                        'title' => 'Bộ sưu tập laptop tốt nhất 2026',
                         'description' => 'Ưu đãi độc quyền <span>-10%</span> giảm giá tuần này',
                         'subtitle' => 'Giá từ <b>$999.00</b>',
                         'button_label' => 'Mua ngay',
                     ],
                     [
-                        'title' => 'Bộ sưu tập điện thoại tốt nhất 2023',
+                        'title' => 'Bộ sưu tập điện thoại tốt nhất 2026',
                         'description' => 'Ưu đãi độc quyền <span>-10%</span> giảm giá tuần này',
                         'subtitle' => 'Giá từ <b>$999.00</b>',
                         'button_label' => 'Mua ngay',
@@ -1193,19 +1193,19 @@ class TranslationSeeder extends BaseTranslationSeeder
                 'name' => 'Slider accueil',
                 'items' => [
                     [
-                        'title' => 'La meilleure collection de tablettes 2023',
+                        'title' => 'La meilleure collection de tablettes 2026',
                         'description' => 'Offre exclusive <span>-35%</span> de réduction cette semaine',
                         'subtitle' => 'À partir de <b>$274.00</b>',
                         'button_label' => 'Acheter',
                     ],
                     [
-                        'title' => 'La meilleure collection de notebooks 2023',
+                        'title' => 'La meilleure collection de notebooks 2026',
                         'description' => 'Offre exclusive <span>-10%</span> de réduction cette semaine',
                         'subtitle' => 'À partir de <b>$999.00</b>',
                         'button_label' => 'Acheter',
                     ],
                     [
-                        'title' => 'La meilleure collection de téléphones 2023',
+                        'title' => 'La meilleure collection de téléphones 2026',
                         'description' => 'Offre exclusive <span>-10%</span> de réduction cette semaine',
                         'subtitle' => 'À partir de <b>$999.00</b>',
                         'button_label' => 'Acheter',
@@ -1216,19 +1216,19 @@ class TranslationSeeder extends BaseTranslationSeeder
                 'name' => 'Slider beranda',
                 'items' => [
                     [
-                        'title' => 'Koleksi tablet terbaik 2023',
+                        'title' => 'Koleksi tablet terbaik 2026',
                         'description' => 'Penawaran eksklusif <span>-35%</span> diskon minggu ini',
                         'subtitle' => 'Mulai dari <b>$274.00</b>',
                         'button_label' => 'Belanja',
                     ],
                     [
-                        'title' => 'Koleksi notebook terbaik 2023',
+                        'title' => 'Koleksi notebook terbaik 2026',
                         'description' => 'Penawaran eksklusif <span>-10%</span> diskon minggu ini',
                         'subtitle' => 'Mulai dari <b>$999.00</b>',
                         'button_label' => 'Belanja',
                     ],
                     [
-                        'title' => 'Koleksi ponsel terbaik 2023',
+                        'title' => 'Koleksi ponsel terbaik 2026',
                         'description' => 'Penawaran eksklusif <span>-10%</span> diskon minggu ini',
                         'subtitle' => 'Mulai dari <b>$999.00</b>',
                         'button_label' => 'Belanja',
@@ -1239,19 +1239,19 @@ class TranslationSeeder extends BaseTranslationSeeder
                 'name' => 'Ana sayfa slider',
                 'items' => [
                     [
-                        'title' => 'En iyi tablet koleksiyonu 2023',
+                        'title' => 'En iyi tablet koleksiyonu 2026',
                         'description' => 'Özel teklif <span>-35%</span> bu hafta indirimli',
                         'subtitle' => '<b>$274.00</b>\'dan başlayan',
                         'button_label' => 'Alışveriş',
                     ],
                     [
-                        'title' => 'En iyi notebook koleksiyonu 2023',
+                        'title' => 'En iyi notebook koleksiyonu 2026',
                         'description' => 'Özel teklif <span>-10%</span> bu hafta indirimli',
                         'subtitle' => '<b>$999.00</b>\'dan başlayan',
                         'button_label' => 'Alışveriş',
                     ],
                     [
-                        'title' => 'En iyi telefon koleksiyonu 2023',
+                        'title' => 'En iyi telefon koleksiyonu 2026',
                         'description' => 'Özel teklif <span>-10%</span> bu hafta indirimli',
                         'subtitle' => '<b>$999.00</b>\'dan başlayan',
                         'button_label' => 'Alışveriş',
@@ -1267,40 +1267,40 @@ class TranslationSeeder extends BaseTranslationSeeder
             'ar' => [
                 'name' => 'سلايدر الرئيسية',
                 'items' => [
-                    ['title' => 'مجموعة الملابس', 'description' => 'وصل حديثاً 2023', 'button_label' => 'تسوق المجموعة'],
-                    ['title' => 'مجموعة الصيف', 'description' => 'الأكثر مبيعاً 2023', 'button_label' => 'تسوق المجموعة'],
+                    ['title' => 'مجموعة الملابس', 'description' => 'وصل حديثاً 2026', 'button_label' => 'تسوق المجموعة'],
+                    ['title' => 'مجموعة الصيف', 'description' => 'الأكثر مبيعاً 2026', 'button_label' => 'تسوق المجموعة'],
                     ['title' => 'تصاميم رائعة جديدة', 'description' => 'وصل الشتاء', 'button_label' => 'تسوق المجموعة'],
                 ],
             ],
             'vi' => [
                 'name' => 'Slider trang chủ',
                 'items' => [
-                    ['title' => 'Bộ sưu tập quần áo', 'description' => 'Hàng mới về 2023', 'button_label' => 'Mua bộ sưu tập'],
-                    ['title' => 'Bộ sưu tập mùa hè', 'description' => 'Bán chạy nhất 2023', 'button_label' => 'Mua bộ sưu tập'],
+                    ['title' => 'Bộ sưu tập quần áo', 'description' => 'Hàng mới về 2026', 'button_label' => 'Mua bộ sưu tập'],
+                    ['title' => 'Bộ sưu tập mùa hè', 'description' => 'Bán chạy nhất 2026', 'button_label' => 'Mua bộ sưu tập'],
                     ['title' => 'Thiết kế mới tuyệt vời', 'description' => 'Mùa đông đã đến', 'button_label' => 'Mua bộ sưu tập'],
                 ],
             ],
             'fr' => [
                 'name' => 'Slider accueil',
                 'items' => [
-                    ['title' => 'La collection de vêtements', 'description' => 'Nouveautés 2023', 'button_label' => 'Voir la collection'],
-                    ['title' => "La collection d'été", 'description' => 'Meilleures ventes 2023', 'button_label' => 'Voir la collection'],
+                    ['title' => 'La collection de vêtements', 'description' => 'Nouveautés 2026', 'button_label' => 'Voir la collection'],
+                    ['title' => "La collection d'été", 'description' => 'Meilleures ventes 2026', 'button_label' => 'Voir la collection'],
                     ['title' => 'Nouveaux designs incroyables', 'description' => "L'hiver est arrivé", 'button_label' => 'Voir la collection'],
                 ],
             ],
             'id' => [
                 'name' => 'Slider beranda',
                 'items' => [
-                    ['title' => 'Koleksi Pakaian', 'description' => 'Produk Baru 2023', 'button_label' => 'Belanja Koleksi'],
-                    ['title' => 'Koleksi Musim Panas', 'description' => 'Terlaris 2023', 'button_label' => 'Belanja Koleksi'],
+                    ['title' => 'Koleksi Pakaian', 'description' => 'Produk Baru 2026', 'button_label' => 'Belanja Koleksi'],
+                    ['title' => 'Koleksi Musim Panas', 'description' => 'Terlaris 2026', 'button_label' => 'Belanja Koleksi'],
                     ['title' => 'Desain Baru yang Menakjubkan', 'description' => 'Musim Dingin Tiba', 'button_label' => 'Belanja Koleksi'],
                 ],
             ],
             'tr' => [
                 'name' => 'Ana sayfa slider',
                 'items' => [
-                    ['title' => 'Giyim Koleksiyonu', 'description' => 'Yeni Gelenler 2023', 'button_label' => 'Koleksiyonu İncele'],
-                    ['title' => 'Yaz Koleksiyonu', 'description' => 'En Çok Satanlar 2023', 'button_label' => 'Koleksiyonu İncele'],
+                    ['title' => 'Giyim Koleksiyonu', 'description' => 'Yeni Gelenler 2026', 'button_label' => 'Koleksiyonu İncele'],
+                    ['title' => 'Yaz Koleksiyonu', 'description' => 'En Çok Satanlar 2026', 'button_label' => 'Koleksiyonu İncele'],
                     ['title' => 'Muhteşem Yeni Tasarımlar', 'description' => 'Kış Geldi', 'button_label' => 'Koleksiyonu İncele'],
                 ],
             ],

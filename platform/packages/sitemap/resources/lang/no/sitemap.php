@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Flere søkemotorer',
         'benefit_reliable' => 'Moderne, pålitelig protokoll',
         'about_google' => 'Om Google',
-        'google_note' => 'Google avviklet nettstedskart-ping-tjenesten i juni 2023 og er nå avhengig av naturlig crawling og lastmod-tagger.',
+        'google_note' => 'Google avviklet nettstedskart-ping-tjenesten i juni 2026 og er nå avhengig av naturlig crawling og lastmod-tagger.',
         'sitemap_info_title' => 'Hvordan nettstedskart fungerer',
         'sitemap_info_description' => 'Nettstedskartet ditt genereres og oppdateres automatisk når innholdet endres. Det hjelper søkemotorer med å oppdage og indeksere nettstedets innhold mer effektivt.',
         'sitemap_url' => 'Nettstedskart URL',

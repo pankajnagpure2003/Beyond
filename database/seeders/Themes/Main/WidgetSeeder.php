@@ -134,7 +134,7 @@ class WidgetSeeder extends ThemeSeeder
                 'data' => [
                     'id' => 'SiteAcceptedPaymentsWidget',
                     'name' => 'Accepted Payments',
-                    'image' => $this->filePath('general/footer-pay.png', 'main'),
+                    'image' => $this->filePath('general/footer-brand-logo.png', 'main'),
                     'url' => '#',
                 ],
             ],

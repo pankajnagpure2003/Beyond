@@ -21,7 +21,7 @@
                             <div>[ecommerce-product-groups title="Trending Products" limit="8" tabs="all,featured,on-sale,trending,top-rated"][/ecommerce-product-groups]</div>
                             <div>[ads style="1" key_1="UROL9F9ZZVAA" key_2="B30VDBKO7SBF"][/ads]</div>
                             <div>[ecommerce-flash-sale style="1" title="Deal of The Day" flash_sale_id="1" limit="4" button_label="View All Deals" button_url="/products"][/ecommerce-flash-sale]</div>
-                            <div>[ecommerce-products style="grid" category_ids="20" limit="12" with_sidebar="on" image="main/gadgets/gadget-girl.png" action_label="More Products" ads_ids="3,4"][/ecommerce-products]</div>
+                            <div>[ecommerce-products style="grid" category_ids="20" limit="12" with_sidebar="on" image="main/gadgets/electronics-products-thumbnail.png" action_label="More Products" ads_ids="3,4"][/ecommerce-products]</div>
                             <div>[ads style="4" key_1="B5ZA76ZWMWAE" key_2="F1LTQS976YPY" key_3="IHPZ2WBSYJUK"][/ads]</div>
                             <div>[ecommerce-products style="slider" title="New Arrivals" by="collection" collection_ids="1" limit="12"][/ecommerce-products]</div>
                             <div>[ecommerce-product-groups style="columns" limit="3" tabs="on-sale,trending,top-rated"][/ecommerce-product-groups]</div>

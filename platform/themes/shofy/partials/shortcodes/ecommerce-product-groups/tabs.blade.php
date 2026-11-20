@@ -49,7 +49,11 @@
 
                                 @include(
                                     Theme::getThemeNamespace('views.ecommerce.includes.product-items'),
-                                    ['products' => $tab['products'], 'itemsPerRow' => get_products_per_row(), 'layout' => 'grid']
+                                    [
+                                        'products' => $tab['products'],
+                                        'itemsPerRow' => get_products_per_row(),
+                                        'layout' => 'grid',
+                                    ]
                                 )
                             @endforeach
                         </div>

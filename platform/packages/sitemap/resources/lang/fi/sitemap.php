@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Useita hakukoneita',
         'benefit_reliable' => 'Moderni, luotettava protokolla',
         'about_google' => 'Tietoa Googlesta',
-        'google_note' => 'Google poisti sivukartan pinggauspalvelunsa kesäkuussa 2023 ja luottaa nyt luonnolliseen indeksointiin ja lastmod-tageihin.',
+        'google_note' => 'Google poisti sivukartan pinggauspalvelunsa kesäkuussa 2026 ja luottaa nyt luonnolliseen indeksointiin ja lastmod-tageihin.',
         'sitemap_info_title' => 'Miten sivukartta toimii',
         'sitemap_info_description' => 'Sivukarttasi luodaan ja päivitetään automaattisesti, kun sisältö muuttuu. Se auttaa hakukoneita löytämään ja indeksoimaan verkkosivustosi sisältöä tehokkaammin.',
         'sitemap_url' => 'Sivukartan URL',

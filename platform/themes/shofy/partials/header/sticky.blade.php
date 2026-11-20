@@ -11,7 +11,7 @@
                     {!! Theme::partial('header.logo', ['defaultIsDark' => theme_option('header_sticky_logo_type', 'default') === 'default']) !!}
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 d-none d-md-block">
-                    <div class="tp-header-sticky-menu main-menu menu-style-1">
+                    <div class="tp-header-sticky-menu main-menu menu-style-1" style="margin-inline-end: -40px;">
                         <nav id="mobile-menu">
                             {!! Menu::renderMenuLocation('main-menu', ['view' => 'main-menu']) !!}
                         </nav>

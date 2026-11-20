@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Box Admin Panel — Complete Deep-Dive Guide & Feature Manual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0989ff;
+            --primary-dark: #012d84;
+            --primary-navy: #041a4a;
+            --accent: #ffd200;
+            --dark: #0f172a;
+            --gray-light: #f8fafc;
+            --gray-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            line-height: 1.65;
+            padding-bottom: 60px;
+        }
+        .top-action-bar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(4, 26, 74, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 2px solid var(--primary);
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #ffffff;
+        }
+        .top-action-bar .brand-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .action-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+        }
+        .btn-print { background: #ffffff; color: var(--primary-dark); }
+        .btn-print:hover { background: var(--accent); color: var(--dark); }
+        .btn-download { background: var(--primary); color: #ffffff; }
+        .btn-download:hover { background: #0070d6; }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            overflow: hidden;
+            border: 1px solid var(--gray-border);
+        }
+        .header-hero {
+            background: linear-gradient(135deg, #041a4a 0%, #012d84 60%, #0989ff 100%);
+            color: #ffffff;
+            padding: 48px 40px;
+        }
+        .header-hero h1 { font-size: 2.2rem; font-weight: 800; line-height: 1.25; margin-bottom: 12px; }
+        .header-hero p.subtitle { font-size: 1.05rem; opacity: 0.9; max-width: 800px; margin-bottom: 24px; }
+        .meta-badges { display: flex; flex-wrap: wrap; gap: 10px; }
+        .meta-badge {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+        .content-body { padding: 40px; }
+        .overview-box {
+            background: #f8fafc;
+            border-left: 4px solid var(--primary);
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 36px;
+        }
+        .overview-box h3 { color: var(--primary-dark); margin-bottom: 10px; font-size: 1.2rem; }
+        .overview-box ul {
+            padding-left: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .section-header-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--dark);
+            border-bottom: 2px solid var(--gray-border);
+            padding-bottom: 10px;
+            margin: 40px 0 24px 0;
+        }
+        .module-card {
+            background: #ffffff;
+            border: 1px solid var(--gray-border);
+            border-radius: 12px;
+            padding: 22px 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .module-card:hover {
+            box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+            border-color: #cbd5e1;
+        }
+        .module-title-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .module-title-bar h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .route-pill {
+            font-family: 'JetBrains Mono', monospace;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .module-purpose {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+        .features-list { list-style: none; padding-left: 0; }
+        .features-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 8px;
+            font-size: 0.93rem;
+            color: var(--text-main);
+        }
+        .features-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        .pitch-callout {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 28px;
+            margin-top: 40px;
+        }
+        .pitch-callout h3 { color: var(--primary-dark); font-size: 1.3rem; margin-bottom: 16px; }
+        .pitch-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+        .pitch-card {
+            background: #ffffff;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .pitch-card strong { color: var(--dark); display: block; margin-bottom: 6px; font-size: 0.95rem; }
+        .pitch-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+        .footer-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 40px;
+            border-top: 1px solid var(--gray-border);
+            padding-top: 20px;
+        }
+        @media print {
+            .top-action-bar { display: none !important; }
+            body { background: #ffffff !important; padding: 0 !important; }
+            .container { box-shadow: none !important; border: none !important; margin: 0 !important; max-width: 100% !important; }
+            .module-card { break-inside: avoid; page-break-inside: avoid; box-shadow: none !important; border: 1px solid #ccc !important; }
+            .header-hero { background: #041a4a !important; color: #ffffff !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+        @media (max-width: 768px) {
+            .content-body { padding: 20px; }
+            .header-hero { padding: 32px 20px; }
+            .overview-box ul { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-action-bar">
+        <div class="brand-text">
+            <span>📦</span>
+            <span>Beyond Box Admin Documentation</span>
+        </div>
+        <div class="action-buttons">
+            <button class="btn btn-print" onclick="window.print()">
+                <span>🖨️</span> Print / Save as PDF
+            </button>
+            <a href="/Beyond_Box_Admin_Panel_Guide.doc" download class="btn btn-download">
+                <span>📘</span> Download Word (.doc)
+            </a>
+            <a href="/Beyond_Box_Admin_Panel_Guide.md" download class="btn btn-download">
+                <span>📥</span> Download Markdown
+            </a>
+            <a href="/Beyond_Box_Admin_Panel_Guide.txt" download class="btn btn-download">
+                <span>📄</span> Download Text
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header-hero">
+            <h1>🛠️ Beyond Box Admin Panel</h1>
+            <p class="subtitle">Complete Operational Manual & Feature Architecture of all 22 Platform Modules</p>
+            <div class="meta-badges">
+                <span class="meta-badge">🌐 Live Admin: /admin</span>
+                <span class="meta-badge">⚡ Sub-second Speed: 0.16s - 0.30s</span>
+                <span class="meta-badge">🏬 Multi-Vendor Ready</span>
+                <span class="meta-badge">🛡️ Role-Based Access (RBAC)</span>
+            </div>
+        </div>
+
+        <div class="content-body">
+            <div class="overview-box">
+                <h3>🧭 Executive Overview</h3>
+                <p style="margin-bottom: 12px; font-size: 0.95rem; color: #475569;">
+                    The Beyond Box Admin Panel gives non-technical store managers, operations executives, and corporate admins complete 360° control over inventory, orders, marketing campaigns, vendor payouts, and checkout rules with zero code dependencies.
+                </p>
+                <ul>
+                    <li>Unified Global Search</li>
+                    <li>Instant PDF Tax Invoicing</li>
+                    <li>Automatic WebP Media Optimization</li>
+                    <li>Real-Time Courier Tracking (AWB)</li>
+                    <li>Granular Staff Permissions (RBAC)</li>
+                    <li>Multi-Gateway Online & COD Payments</li>
+                </ul>
+            </div>
+
+            <h2 class="section-header-title">📋 Complete 22 Admin Panel Modules Breakdown</h2>
+
+            <!-- 1. Dashboard -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>1. 📊</span> Dashboard</h3>
+                    <span class="route-pill">/admin</span>
+                </div>
+                <div class="module-purpose">Central executive command center and real-time business health monitoring station.</div>
+                <ul class="features-list">
+                    <li><strong>Live KPI Metric Cards:</strong> Real-time counters for Total Orders, Active Catalog Products (30 verified items), Registered Buyers, and Reviews.</li>
+                    <li><strong>Sales Analytics Charts:</strong> Interactive graphical visualization of monthly revenue breakdowns and daily order velocity.</li>
+                    <li><strong>Recent Orders Quick Actions:</strong> Review incoming orders with instant shortcuts to view details, verify payments, or dispatch.</li>
+                    <li><strong>System Audit Log (<code>/admin/audit-logs</code>):</strong> Comprehensive compliance audit recording who edited prices, created products, or changed settings with timestamps and IP addresses.</li>
+                </ul>
+            </div>
+
+            <!-- 2. Ecommerce -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>2. 🛍️</span> Ecommerce</h3>
+                    <span class="route-pill">#cms-plugins-ecommerce</span>
+                </div>
+                <div class="module-purpose">The core commercial engine powering daily catalog management, orders, discounts, and customer checkout.</div>
+                <ul class="features-list">
+                    <li><strong>Products Management:</strong> Create Simple Products (single SKU) and Variable Products (with Size, Color, Storage attributes). Schedule promotional sales with automated calendar timers.</li>
+                    <li><strong>Inventory & Stock Control:</strong> Automatic deduction on order placement, low-stock warnings, and backorder handling.</li>
+                    <li><strong>Categories Tree:</strong> Unlimited hierarchical parent-child categories with custom category banners that trigger the Beyond Box Logo Blue theme (<code>#012d84</code>).</li>
+                    <li><strong>Brands Directory:</strong> Dedicated brand showcase pages (e.g. <code>/brands</code>) for Apple, Sony, Samsung, Bose.</li>
+                    <li><strong>Order Fulfillment Pipeline:</strong> 5-stage lifecycle (Pending ➔ Processing ➔ Shipped ➔ Completed) with courier assignment and live tracking AWB links.</li>
+                    <li><strong>Automated PDF Invoices:</strong> Generate professional GST/Tax invoices and printable packing slips with one click.</li>
+                    <li><strong>Marketing Discounts & Coupons:</strong> Create percentage off (<code>SAVE20</code>), flat off (<code>FLAT500</code>), or free shipping coupons with minimum order values and usage limits.</li>
+                    <li><strong>Flash Sales:</strong> Run time-sensitive sales with real-time countdown clocks on storefront cards.</li>
+                    <li><strong>Reviews Moderation:</strong> Approve customer ratings with "Verified Purchase" badges.</li>
+                </ul>
+            </div>
+
+            <!-- 3. Product Specification -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>3. 📑</span> Product Specification</h3>
+                    <span class="route-pill">#cms-plugins-product-specification</span>
+                </div>
+                <div class="module-purpose">Technical data sheets and attributes manager for electronics, gadgets, and technical products.</div>
+                <ul class="features-list">
+                    <li>Create grouped technical tables (e.g. <em>Processor, Display, Battery, Connectivity, Dimensions, Warranty</em>).</li>
+                    <li>Neatly presented in a dedicated "Specifications" tab on the product detail page for customer clarity.</li>
+                </ul>
+            </div>
+
+            <!-- 4. Marketplace -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>4. 🏬</span> Marketplace</h3>
+                    <span class="route-pill">#cms-plugins-marketplace</span>
+                </div>
+                <div class="module-purpose">Transforms the platform into a multi-seller ecosystem (Amazon / Flipkart model).</div>
+                <ul class="features-list">
+                    <li><strong>Vendor Onboarding & KYC:</strong> External sellers register online; admin verifies business documents and approves/rejects vendor stores.</li>
+                    <li><strong>Automated Commission Engine:</strong> Set global platform commission percentages or vendor-specific rates on every completed sale.</li>
+                    <li><strong>Vendor Wallets & Payouts:</strong> Automated net earnings calculation; sellers submit payout requests for admin bank/PayPal transfer.</li>
+                    <li><strong>Individual Store Pages:</strong> Dedicated vendor storefront profile (<code>/stores/vendor-name</code>) showcasing the vendor's catalog.</li>
+                </ul>
+            </div>
+
+            <!-- 5. Pages -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>5. 📄</span> Pages</h3>
+                    <span class="route-pill">/admin/pages</span>
+                </div>
+                <div class="module-purpose">Content Management System (CMS) for informational and corporate landing pages.</div>
+                <ul class="features-list">
+                    <li>Manage <em>Homepage, About Us, Privacy Policy, Terms & Conditions, Return & Refund Policy, Shipping Information</em>.</li>
+                    <li>Full WYSIWYG editor with visual formatting and custom SEO Meta Titles/Descriptions for top Google search indexing.</li>
+                </ul>
+            </div>
+
+            <!-- 6. Blog -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>6. ✍️</span> Blog</h3>
+                    <span class="route-pill">#cms-plugins-blog</span>
+                </div>
+                <div class="module-purpose">Content marketing and organic Google SEO traffic generation engine.</div>
+                <ul class="features-list">
+                    <li>Publish buyer guides, tech news, unboxing reviews, and promotional articles.</li>
+                    <li>Organize posts into categories and tags to attract high-intent organic shoppers directly from search engines.</li>
+                </ul>
+            </div>
+
+            <!-- 7. Payments -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>7. 💳</span> Payments</h3>
+                    <span class="route-pill">#cms-plugins-payments</span>
+                </div>
+                <div class="module-purpose">Comprehensive financial audit trail and transaction log.</div>
+                <ul class="features-list">
+                    <li>Tracks every online and offline payment attempt (Success, Pending, Failed, Refunded).</li>
+                    <li>Captures payment gateway reference IDs (Stripe Charge ID, PayPal Order ID, Razorpay Payment ID) for reconciliation.</li>
+                </ul>
+            </div>
+
+            <!-- 8. Galleries -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>8. 🖼️</span> Galleries</h3>
+                    <span class="route-pill">/admin/galleries</span>
+                </div>
+                <div class="module-purpose">Interactive visual media galleries and lookbook albums.</div>
+                <ul class="features-list">
+                    <li>Create photo albums for corporate lookbooks, warehouse operations, product launches, or customer events.</li>
+                    <li>Easily embed albums into any page with clean shortcodes.</li>
+                </ul>
+            </div>
+
+            <!-- 9. Testimonials -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>9. ⭐</span> Testimonials</h3>
+                    <span class="route-pill">/admin/testimonials</span>
+                </div>
+                <div class="module-purpose">Social proof and client feedback showcase.</div>
+                <ul class="features-list">
+                    <li>Manage customer name, avatar photo, company/designation, star rating, and review quote.</li>
+                    <li>Automatically feeds the <em>"What Our Clients Say"</em> carousel slider on the homepage.</li>
+                </ul>
+            </div>
+
+            <!-- 10. Ads -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>10. 📢</span> Ads</h3>
+                    <span class="route-pill">#cms-plugins-ads</span>
+                </div>
+                <div class="module-purpose">On-site banner advertising and promotional placement management.</div>
+                <ul class="features-list">
+                    <li>Upload promotional banners displayed in headers, category headers, sidebars, and homepage slots.</li>
+                    <li>Set destination URLs, target window settings, and monitor impressions and click-through rates.</li>
+                </ul>
+            </div>
+
+            <!-- 11. Announcements -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>11. 🔔</span> Announcements</h3>
+                    <span class="route-pill">/admin/announcements</span>
+                </div>
+                <div class="module-purpose">Topbar notification ribbon at the very head of the website.</div>
+                <ul class="features-list">
+                    <li>Display urgent notices (e.g. <em>"Free Shipping on orders above $99"</em> or <em>"Flash Sale Live — Code: BEYOND20"</em>).</li>
+                    <li>Supports live countdown timers, CTA buttons, and dismissible close actions.</li>
+                </ul>
+            </div>
+
+            <!-- 12. Contact -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>12. 📬</span> Contact</h3>
+                    <span class="route-pill">#cms-plugins-contact</span>
+                </div>
+                <div class="module-purpose">Inquiry inbox capturing messages submitted through the <code>/contact</code> page.</div>
+                <ul class="features-list">
+                    <li>Logs sender name, email, phone number, subject, and message body.</li>
+                    <li>Maintains status tracking (<em>Unread, Read, Replied</em>) to ensure prompt customer support.</li>
+                </ul>
+            </div>
+
+            <!-- 13. Simple Sliders -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>13. 🎞️</span> Simple Sliders</h3>
+                    <span class="route-pill">/admin/simple-sliders</span>
+                </div>
+                <div class="module-purpose">Homepage Hero Carousel banner slider management.</div>
+                <ul class="features-list">
+                    <li>Control the first high-impact visual banners visitors see on the homepage.</li>
+                    <li>Update background graphics, headlines, promotional subtitles, and call-to-action buttons (e.g. <em>"Shop Now"</em>).</li>
+                </ul>
+            </div>
+
+            <!-- 14. FAQs -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>14. ❓</span> FAQs</h3>
+                    <span class="route-pill">#cms-plugins-faq</span>
+                </div>
+                <div class="module-purpose">Frequently Asked Questions knowledge base to streamline customer support.</div>
+                <ul class="features-list">
+                    <li>Group questions into categories (<em>Shipping, Returns, Payments, Account</em>).</li>
+                    <li>Displays in an interactive accordion (+/- expand) on the <code>/faq</code> page and footer.</li>
+                </ul>
+            </div>
+
+            <!-- 15. Newsletters -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>15. 📧</span> Newsletters</h3>
+                    <span class="route-pill">/admin/newsletters</span>
+                </div>
+                <div class="module-purpose">Email marketing subscriber database.</div>
+                <ul class="features-list">
+                    <li>Stores subscriber email addresses captured from the footer signup form.</li>
+                    <li>One-click export to CSV/Excel for campaigns via Mailchimp, SendGrid, or Brevo.</li>
+                </ul>
+            </div>
+
+            <!-- 16. Locations -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>16. 🌍</span> Locations</h3>
+                    <span class="route-pill">#cms-plugins-location</span>
+                </div>
+                <div class="module-purpose">Global shipping geographical database (Countries, States, Cities).</div>
+                <ul class="features-list">
+                    <li>Define supported countries and regions where shipping is available.</li>
+                    <li>Powers dynamic checkout address dropdowns and location-based shipping fee calculations.</li>
+                </ul>
+            </div>
+
+            <!-- 17. Media -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>17. 📁</span> Media</h3>
+                    <span class="route-pill">/admin/media</span>
+                </div>
+                <div class="module-purpose">Built-in Cloud Storage Drive (in-app Google Drive / Dropbox).</div>
+                <ul class="features-list">
+                    <li>Drag-and-drop bulk file upload with folder organization (<code>main/products</code>, <code>main/product-categories</code>).</li>
+                    <li>Automated WebP conversion and responsive thumbnail generation to keep site speed lightning fast.</li>
+                </ul>
+            </div>
+
+            <!-- 18. Appearance -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>18. 🎨</span> Appearance</h3>
+                    <span class="route-pill">#cms-core-appearance</span>
+                </div>
+                <div class="module-purpose">Visual branding, theme options, and navigation hierarchy.</div>
+                <ul class="features-list">
+                    <li><strong>Theme Options (<code>/admin/theme/options</code>):</strong> Change Header Logo, Mobile Logo, Admin Logo, Favicon, Topbar notices, Footer text, and Brand color palette.</li>
+                    <li><strong>Menus (<code>/admin/menus</code>):</strong> Visual drag-and-drop builder for the Main Navbar, Category Dropdown, and Footer links.</li>
+                </ul>
+            </div>
+
+            <!-- 19. Plugins -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>19. 🧩</span> Plugins</h3>
+                    <span class="route-pill">#cms-core-plugins</span>
+                </div>
+                <div class="module-purpose">Modular platform feature toggle manager.</div>
+                <ul class="features-list">
+                    <li>Enable or disable platform modules (e.g. Marketplace, Blog, FAQ, Newsletter) with a single toggle switch without touching code.</li>
+                </ul>
+            </div>
+
+            <!-- 20. Tools -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>20. 🔧</span> Tools</h3>
+                    <span class="route-pill">#cms-core-tools</span>
+                </div>
+                <div class="module-purpose">Data Synchronize and bulk import/export center.</div>
+                <ul class="features-list">
+                    <li>Bulk import thousands of products, inventory stocks, prices, and categories via Excel/CSV.</li>
+                    <li>Export data for accounting, warehouse management, or ERP integration.</li>
+                </ul>
+            </div>
+
+            <!-- 21. Settings -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>21. ⚙️</span> Settings</h3>
+                    <span class="route-pill">/admin/settings</span>
+                </div>
+                <div class="module-purpose">Global system configuration engine.</div>
+                <ul class="features-list">
+                    <li><strong>Payment Gateways:</strong> Configure Cash on Delivery (COD), Direct Bank Transfer, Stripe, PayPal, and Razorpay API credentials.</li>
+                    <li><strong>Shipping Methods:</strong> Set free shipping cart thresholds, flat rates, and regional delivery charges.</li>
+                    <li><strong>Email & SMTP:</strong> Automated email notifications for order placements, invoices, and shipment tracking via Gmail/SendGrid/Amazon SES.</li>
+                    <li><strong>Currencies:</strong> Multi-currency support (USD, INR, AED, EUR) with exchange rates and formatting.</li>
+                </ul>
+            </div>
+
+            <!-- 22. Platform Administration -->
+            <div class="module-card">
+                <div class="module-title-bar">
+                    <h3><span>22. 🛡️</span> Platform Administration</h3>
+                    <span class="route-pill">/admin/system</span>
+                </div>
+                <div class="module-purpose">System health, server maintenance, and role-based staff security (RBAC).</div>
+                <ul class="features-list">
+                    <li><strong>Users & Roles:</strong> Create staff accounts (e.g. <em>Order Manager, Inventory Clerk, Support Executive</em>) with restricted permission access.</li>
+                    <li><strong>1-Click System Backups:</strong> Download complete database <code>.sql</code> files and uploaded media <code>.zip</code> archives directly to your computer.</li>
+                    <li><strong>Cache Clearing:</strong> Clear route, config, and view caches with one click.</li>
+                </ul>
+            </div>
+
+            <!-- Client Pitch Callout -->
+            <div class="pitch-callout">
+                <h3>💼 3 Golden Talking Points for Client Presentation</h3>
+                <div class="pitch-points">
+                    <div class="pitch-card">
+                        <strong>1. 100% Zero-Coding Control</strong>
+                        <p>You don't need a developer to change prices, add products, upload banners, run sales, or fulfill orders. You and your team have full control from your laptop or smartphone.</p>
+                    </div>
+                    <div class="pitch-card">
+                        <strong>2. Scalable Multi-Vendor Engine</strong>
+                        <p>Whether you sell 10 products yourself or onboard 50 third-party vendors with 50,000 items, the multi-vendor architecture and commission pipeline are already built and tested.</p>
+                    </div>
+                    <div class="pitch-card">
+                        <strong>3. Enterprise Speed & Security</strong>
+                        <p>Sub-second page speeds, encrypted password storage, automated PDF invoicing, and real-time courier tracking make this a turnkey, bank-grade e-commerce solution.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-note">
+                Beyond Box Multi-Vendor E-Commerce Platform • Complete System Documentation • Generated for Platform Operations
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

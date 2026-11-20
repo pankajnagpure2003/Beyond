@@ -13,7 +13,7 @@
         @if($category)
             <div class="tp-product-gadget-categories p-relative fix mb-10" @if($shortcode->border_color) style="border-color: {{ $shortcode->border_color }}" @endif>
                 @if ($image = ($shortcode->image ?: $category->image))
-                    <div class="tp-product-gadget-thumb">
+                    <div class="tp-product-gadget-thumb" @if ($shortcode->image === 'main/gadgets/electronics-products-thumbnail.png') style="right: -2px;" @endif>
                         {{ RvMedia::image($image, $shortcode->title ?: $category->name, attributes: ['loading' => 'lazy']) }}
                     </div>
                 @endif

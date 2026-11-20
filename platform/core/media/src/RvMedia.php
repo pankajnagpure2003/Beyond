@@ -463,7 +463,7 @@ class RvMedia
 
         $request = request();
 
-        if ($uploadPath = $request->input('path')) {
+        if (($uploadPath = $request->input('path')) && $uploadPath !== 'undefined') {
             $folderId = $this->handleTargetFolder($folderId, $uploadPath);
         }
 

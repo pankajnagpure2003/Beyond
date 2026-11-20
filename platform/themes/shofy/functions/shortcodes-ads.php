@@ -112,4 +112,9 @@ app('events')->listen(RouteMatched::class, function (): void {
             SliderAutoplayFieldOption::make()
         );
     });
+
+    try {
+        Shortcode::ignoreCaches(['ads']);
+    } catch (Throwable) {
+    }
 });

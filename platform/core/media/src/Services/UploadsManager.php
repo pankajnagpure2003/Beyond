@@ -60,7 +60,7 @@ class UploadsManager
 
     protected function cleanFolder(string $folder): string
     {
-        return DIRECTORY_SEPARATOR . trim(str_replace('..', '', $folder), DIRECTORY_SEPARATOR);
+        return '/' . trim(str_replace(['..', '\\'], ['', '/'], $folder), '/');
     }
 
     public function deleteDirectory(string $folder): bool|string

@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Nhiều công cụ tìm kiếm',
         'benefit_reliable' => 'Giao thức hiện đại, đáng tin cậy',
         'about_google' => 'Về Google',
-        'google_note' => 'Google đã ngừng sử dụng dịch vụ ping sơ đồ trang vào tháng 6 năm 2023 và hiện dựa vào quét tự nhiên và thẻ lastmod.',
+        'google_note' => 'Google đã ngừng sử dụng dịch vụ ping sơ đồ trang vào tháng 6 năm 2026 và hiện dựa vào quét tự nhiên và thẻ lastmod.',
         'sitemap_info_title' => 'Cách hoạt động của sơ đồ trang',
         'sitemap_info_description' => 'Sơ đồ trang của bạn được tạo và cập nhật tự động mỗi khi nội dung thay đổi. Nó giúp công cụ tìm kiếm khám phá và lập chỉ mục nội dung trang web của bạn hiệu quả hơn.',
         'sitemap_url' => 'URL sơ đồ trang',

@@ -79,6 +79,11 @@ class StoreProductService
 
         $product->images = json_encode($images);
 
+        $rawImage = $product->getAttributes()['image'] ?? null;
+        if (empty($rawImage) || (! empty($images) && ! in_array($rawImage, $images))) {
+            $product->image = Arr::first($images);
+        }
+
         if (! $hasVariation || $forceUpdateAll) {
             if ($product->sale_price > $product->price) {
                 $product->sale_price = null;

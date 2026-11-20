@@ -6,7 +6,9 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                        {!! Theme::partial('header.logo') !!}
+                        <div @style(["transform: scale(1.1); transform-origin: left center" => Theme::get('isHomePage')])>
+                            {!! Theme::partial('header.logo') !!}
+                        </div>
                     </div>
 
                     <div class="col-xl-6 col-lg-7 d-none d-lg-block pl-70">
@@ -93,11 +95,14 @@
                         @php
                             $hasHotline = (bool) theme_option('hotline');
                             $menuColClass = match (true) {
-                                $enabledHeaderCategoriesDropdownOnDesktop && $hasHotline => 'col-xl-6 col-lg-6',
+                                $enabledHeaderCategoriesDropdownOnDesktop && $hasHotline => 'col-xl-7 col-lg-6',
                                 $enabledHeaderCategoriesDropdownOnDesktop && ! $hasHotline => 'col-xl-9 col-lg-9',
                                 ! $enabledHeaderCategoriesDropdownOnDesktop && $hasHotline => 'col-xl-9 col-lg-9',
                                 default => 'col-xl-12 col-lg-12',
                             };
+                            $hotlineColClass = $enabledHeaderCategoriesDropdownOnDesktop && $hasHotline
+                                ? 'col-xl-2 col-lg-3'
+                                : 'col-xl-3 col-lg-3';
                         @endphp
                         <div class="{{ $menuColClass }}">
                             <div class="main-menu menu-style-1">
@@ -108,7 +113,7 @@
                         </div>
 
                         @if ($hotline = theme_option('hotline'))
-                            <div class="col-xl-3 col-lg-3">
+                            <div class="{{ $hotlineColClass }}">
                                 <div class="tp-header-contact d-flex align-items-center justify-content-end">
                                     <div class="tp-header-contact-icon">
                                         <span>

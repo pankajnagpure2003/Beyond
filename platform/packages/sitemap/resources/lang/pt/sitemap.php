@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Vários mecanismos de busca',
         'benefit_reliable' => 'Protocolo moderno e confiável',
         'about_google' => 'Sobre o Google',
-        'google_note' => 'O Google descontinuou o serviço de ping de sitemap em junho de 2023 e agora depende de rastreamento natural e tags lastmod.',
+        'google_note' => 'O Google descontinuou o serviço de ping de sitemap em junho de 2026 e agora depende de rastreamento natural e tags lastmod.',
         'sitemap_info_title' => 'Como o sitemap funciona',
         'sitemap_info_description' => 'Seu sitemap é gerado e atualizado automaticamente sempre que o conteúdo muda. Ele ajuda os mecanismos de busca a descobrir e indexar o conteúdo do seu site de forma mais eficiente.',
         'sitemap_url' => 'URL do sitemap',

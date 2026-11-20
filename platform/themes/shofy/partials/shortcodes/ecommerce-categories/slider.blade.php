@@ -18,7 +18,23 @@
                         <div class="tp-product-category-item text-center mb-40">
                             <div class="tp-product-category-thumb fix">
                                 <a href="{{ $category->url }}" title="{{ $category->name }}">
-                                    {{ RvMedia::image($category->{$imageField}, $category->name) }}
+                                    @php
+                                        $isHomeCategorySlider = Theme::get('isHomePage');
+                                        $categoryImageOverrides = [
+                                            'electronics' => 'main/product-categories/electronics-home.png',
+                                            'watches' => 'main/product-categories/watches-home.png',
+                                            'belts' => 'main/product-categories/belts-home.png',
+                                            'perfumes' => 'main/product-categories/perfumes-home.png',
+                                            'lifestyle-products' => 'main/product-categories/lifestyle-products-home.png',
+                                        ];
+                                        $categoryImage = $isHomeCategorySlider
+                                            ? ($categoryImageOverrides[$category->slug] ?? $category->{$imageField})
+                                            : $category->{$imageField};
+                                        $imageAttributes = $isHomeCategorySlider && in_array($category->slug, ['home-appliances', 'electronics', 'watches', 'belts', 'perfumes', 'lifestyle-products'], true)
+                                            ? ['style' => 'max-width: 100%; max-height: 100%;']
+                                            : [];
+                                    @endphp
+                                    {{ RvMedia::image($categoryImage, $category->name, attributes: $imageAttributes) }}
                                 </a>
                             </div>
                             <div class="tp-product-category-content">

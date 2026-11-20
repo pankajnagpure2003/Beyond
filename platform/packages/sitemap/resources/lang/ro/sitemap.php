@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Motoare de căutare multiple',
         'benefit_reliable' => 'Protocol modern și de încredere',
         'about_google' => 'Despre Google',
-        'google_note' => 'Google a depreciat serviciul de ping al hărților site-ului în iunie 2023 și se bazează acum pe crawling natural și etichete lastmod.',
+        'google_note' => 'Google a depreciat serviciul de ping al hărților site-ului în iunie 2026 și se bazează acum pe crawling natural și etichete lastmod.',
         'sitemap_info_title' => 'Cum funcționează harta site-ului',
         'sitemap_info_description' => 'Harta site-ului este generată și actualizată automat ori de câte ori conținutul se modifică. Ajută motoarele de căutare să descopere și să indexeze mai eficient conținutul site-ului.',
         'sitemap_url' => 'URL hartă site',

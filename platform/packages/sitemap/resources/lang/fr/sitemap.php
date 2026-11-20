@@ -68,7 +68,7 @@ return [
             'benefit_multiple' => 'Plusieurs moteurs de recherche',
             'benefit_reliable' => 'Protocole moderne et fiable',
             'about_google' => 'À propos de Google',
-            'google_note' => 'Google a abandonné son service de ping de plan du site en juin 2023 et s\'appuie maintenant sur l\'exploration naturelle et les balises lastmod.',
+            'google_note' => 'Google a abandonné son service de ping de plan du site en juin 2026 et s\'appuie maintenant sur l\'exploration naturelle et les balises lastmod.',
             'sitemap_info_title' => 'Comment fonctionne le plan du site',
             'sitemap_info_description' => 'Votre plan du site est automatiquement généré et mis à jour chaque fois que le contenu change. Il aide les moteurs de recherche à découvrir et indexer le contenu de votre site Web plus efficacement.',
             'sitemap_url' => 'URL du plan du site',

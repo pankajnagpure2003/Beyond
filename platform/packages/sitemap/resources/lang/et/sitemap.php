@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Mitu otsingumootorit',
         'benefit_reliable' => 'Kaasaegne, usaldusväärne protokoll',
         'about_google' => 'Google kohta',
-        'google_note' => 'Google loobus oma saidilehe pingimise teenusest juunis 2023 ja nüüd tugineb see loomulikule roomamisele ja lastmod siltidele.',
+        'google_note' => 'Google loobus oma saidilehe pingimise teenusest juunis 2026 ja nüüd tugineb see loomulikule roomamisele ja lastmod siltidele.',
         'sitemap_info_title' => 'Kuidas saidileht töötab',
         'sitemap_info_description' => 'Teie saidileht luuakse ja värskendatakse automaatselt, kui sisu muutub. See aitab otsingumootorid teie veebisaidi sisu tõhusamalt avastada ja indekseerida.',
         'sitemap_url' => 'Saidilehe URL',

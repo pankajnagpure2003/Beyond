@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Viac vyhľadávačov',
         'benefit_reliable' => 'Moderný, spoľahlivý protokol',
         'about_google' => 'O Google',
-        'google_note' => 'Google ukončil svoju službu pingovania máp stránok v júni 2023 a teraz sa spolieha na prirodzené prehľadávanie a značky lastmod.',
+        'google_note' => 'Google ukončil svoju službu pingovania máp stránok v júni 2026 a teraz sa spolieha na prirodzené prehľadávanie a značky lastmod.',
         'sitemap_info_title' => 'Ako funguje mapa stránok',
         'sitemap_info_description' => 'Vaša mapa stránok sa automaticky generuje a aktualizuje pri každej zmene obsahu. Pomáha vyhľadávačom efektívnejšie objavovať a indexovať obsah stránky.',
         'sitemap_url' => 'URL mapy stránok',

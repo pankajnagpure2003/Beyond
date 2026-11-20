@@ -5,7 +5,7 @@
     $logo = Theme::getLogo();
     $logoLight = Theme::getLogo('logo_light');
 
-    $height = theme_option('logo_height', 35);
+    $height = theme_option('logo_height', 55);
     $attributes = [
         'style' => sprintf('max-height: %s !important;', is_numeric($height) ? "{$height}px" : $height),
         'loading' => 'eager',

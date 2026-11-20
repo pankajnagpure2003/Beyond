@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Beberapa mesin pencari',
         'benefit_reliable' => 'Protokol modern dan andal',
         'about_google' => 'Tentang Google',
-        'google_note' => 'Google menghentikan layanan ping peta situs mereka pada Juni 2023 dan sekarang mengandalkan crawling alami dan tag lastmod.',
+        'google_note' => 'Google menghentikan layanan ping peta situs mereka pada Juni 2026 dan sekarang mengandalkan crawling alami dan tag lastmod.',
         'sitemap_info_title' => 'Cara Kerja Peta Situs',
         'sitemap_info_description' => 'Peta situs Anda dibuat dan diperbarui secara otomatis setiap kali konten berubah. Ini membantu mesin pencari menemukan dan mengindeks konten situs web Anda dengan lebih efisien.',
         'sitemap_url' => 'URL Peta Situs',

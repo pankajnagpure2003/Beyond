@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => '여러 검색 엔진',
         'benefit_reliable' => '현대적이고 안정적인 프로토콜',
         'about_google' => 'Google 정보',
-        'google_note' => 'Google은 2023년 6월에 사이트맵 핑 서비스를 중단했으며 이제 자연 크롤링 및 lastmod 태그에 의존합니다.',
+        'google_note' => 'Google은 2026년 6월에 사이트맵 핑 서비스를 중단했으며 이제 자연 크롤링 및 lastmod 태그에 의존합니다.',
         'sitemap_info_title' => '사이트맵 작동 방식',
         'sitemap_info_description' => '콘텐츠가 변경될 때마다 사이트맵이 자동으로 생성되고 업데이트됩니다. 검색 엔진이 웹사이트 콘텐츠를 더 효율적으로 발견하고 색인할 수 있도록 도와줍니다.',
         'sitemap_url' => '사이트맵 URL',

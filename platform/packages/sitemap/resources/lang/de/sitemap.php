@@ -68,7 +68,7 @@ return [
             'benefit_multiple' => 'Mehrere Suchmaschinen',
             'benefit_reliable' => 'Modernes, zuverlässiges Protokoll',
             'about_google' => 'Über Google',
-            'google_note' => 'Google hat seinen Sitemap-Ping-Dienst im Juni 2023 eingestellt und verlässt sich nun auf natürliches Crawling und lastmod-Tags.',
+            'google_note' => 'Google hat seinen Sitemap-Ping-Dienst im Juni 2026 eingestellt und verlässt sich nun auf natürliches Crawling und lastmod-Tags.',
             'sitemap_info_title' => 'Wie Sitemap funktioniert',
             'sitemap_info_description' => 'Ihre Sitemap wird automatisch generiert und aktualisiert, wenn sich Inhalte ändern. Sie hilft Suchmaschinen, Ihre Website-Inhalte effizienter zu entdecken und zu indexieren.',
             'sitemap_url' => 'Sitemap-URL',

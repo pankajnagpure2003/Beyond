@@ -1203,7 +1203,7 @@ class Botble {
                     $template.find('.image-data').val(file.url).trigger('change')
                     $template
                         .find('.preview-image')
-                        .attr('src', allowThumb ? file.thumb : file.full_url)
+                        .attr('src', allowThumb && file.thumb ? file.thumb : file.full_url)
                         .show()
                     if (!allowThumb) {
                         $template.find('.preview-image-wrapper').addClass('preview-image-wrapper-not-allow-thumb')
@@ -1242,7 +1242,7 @@ class Botble {
                     $currentBox.find('.image-data').val(firstItem.url).trigger('change')
                     $currentBox
                         .find('.preview-image')
-                        .attr('src', allowThumb ? firstItem.thumb : firstItem.full_url)
+                        .attr('src', allowThumb && firstItem.thumb ? firstItem.thumb : firstItem.full_url)
                         .show()
 
                     gallerySelectImages(files, $currentBoxList, [0])

@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Maraming search engine',
         'benefit_reliable' => 'Modernong, maaasahang protocol',
         'about_google' => 'Tungkol sa Google',
-        'google_note' => 'Inalis ng Google ang kanilang sitemap ping service noong Hunyo 2023 at umaasa na ngayon sa natural na crawling at lastmod tags.',
+        'google_note' => 'Inalis ng Google ang kanilang sitemap ping service noong Hunyo 2026 at umaasa na ngayon sa natural na crawling at lastmod tags.',
         'sitemap_info_title' => 'Paano Gumagana ang Sitemap',
         'sitemap_info_description' => 'Awtomatikong nabubuo at naa-update ang iyong sitemap tuwing may nagbabago sa content. Tinutulungan nito ang mga search engine na mas mahusay na matuklasan at mag-index ng iyong website content.',
         'sitemap_url' => 'URL ng Sitemap',

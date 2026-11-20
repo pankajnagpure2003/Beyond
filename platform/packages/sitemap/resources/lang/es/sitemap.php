@@ -68,7 +68,7 @@ return [
             'benefit_multiple' => 'Múltiples motores de búsqueda',
             'benefit_reliable' => 'Protocolo moderno y confiable',
             'about_google' => 'Acerca de Google',
-            'google_note' => 'Google descontinuó su servicio de ping de mapa del sitio en junio de 2023 y ahora confía en el rastreo natural y las etiquetas lastmod.',
+            'google_note' => 'Google descontinuó su servicio de ping de mapa del sitio en junio de 2026 y ahora confía en el rastreo natural y las etiquetas lastmod.',
             'sitemap_info_title' => 'Cómo funciona el mapa del sitio',
             'sitemap_info_description' => 'Su mapa del sitio se genera y actualiza automáticamente cada vez que cambia el contenido. Ayuda a los motores de búsqueda a descubrir e indexar el contenido de su sitio web de manera más eficiente.',
             'sitemap_url' => 'URL del mapa del sitio',
