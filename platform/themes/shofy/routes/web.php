@@ -26,4 +26,10 @@ Route::controller(ShofyController::class)
         });
     });
 
+Theme::registerRoutes(function (): void {
+    Route::get('404', function () {
+        return response(Theme::scope('404')->render(), 404);
+    })->name('public.404');
+});
+
 Theme::routes();

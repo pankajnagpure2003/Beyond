@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Flere søgemaskiner',
         'benefit_reliable' => 'Moderne, pålidelig protokol',
         'about_google' => 'Om Google',
-        'google_note' => 'Google udfasede deres sitemap-ping-service i juni 2023 og er nu afhængig af naturlig crawling og lastmod-tags.',
+        'google_note' => 'Google udfasede deres sitemap-ping-service i juni 2026 og er nu afhængig af naturlig crawling og lastmod-tags.',
         'sitemap_info_title' => 'Hvordan Sitemap fungerer',
         'sitemap_info_description' => 'Dit sitemap genereres og opdateres automatisk, når indholdet ændres. Det hjælper søgemaskiner med at opdage og indeksere dit webstedsindhold mere effektivt.',
         'sitemap_url' => 'Sitemap URL',

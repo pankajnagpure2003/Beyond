@@ -49,7 +49,7 @@ class AdsSeeder extends ThemeSeeder
         return [
             [
                 'key' => 'UROL9F9ZZVAA',
-                'image' => $this->filePath('banners/1.jpg'),
+                'image' => $this->filePath('banners/smartphone-banner.png'),
                 'url' => '/products',
                 'metadata' => [
                     'title' => "Smartphone \n BLU G91 Pro 2022",
@@ -59,7 +59,7 @@ class AdsSeeder extends ThemeSeeder
             ],
             [
                 'key' => 'B30VDBKO7SBF',
-                'image' => $this->filePath('banners/2.jpg'),
+                'image' => $this->filePath('banners/headphone-banner.png'),
                 'url' => '/products',
                 'metadata' => [
                     'title' => "HyperX Cloud II \n Wireless",
@@ -69,7 +69,7 @@ class AdsSeeder extends ThemeSeeder
             ],
             [
                 'key' => 'BN3ZCHLIE95I',
-                'image' => $this->filePath('gadgets/gadget-banner-1.jpg'),
+                'image' => $this->filePath('gadgets/gadget-banner-1.png'),
                 'url' => '/products',
                 'metadata' => [
                     'title' => "Selected novelty \n Products",
@@ -78,7 +78,7 @@ class AdsSeeder extends ThemeSeeder
             ],
             [
                 'key' => 'QGPRRJ2MPZYA',
-                'image' => $this->filePath('gadgets/gadget-banner-2.jpg'),
+                'image' => $this->filePath('gadgets/gadget-banner-2.png'),
                 'url' => '/products',
                 'metadata' => [
                     'title' => "Top Rated \n Products",
@@ -91,7 +91,7 @@ class AdsSeeder extends ThemeSeeder
                 'url' => $products[0]->url,
                 'metadata' => [
                     'title' => 'Samsung Galaxy Tab S6, Wifi Tablet',
-                    'subtitle' => 'Tablet Collection 2023',
+                    'subtitle' => 'Tablet Collection 2026',
                     'button_label' => 'Shop Now',
                 ],
             ],
@@ -101,7 +101,7 @@ class AdsSeeder extends ThemeSeeder
                 'url' => $products[1]->url,
                 'metadata' => [
                     'title' => 'Samsung Galaxy Tab S6, Wifi Tablet',
-                    'subtitle' => 'Tablet Collection 2023',
+                    'subtitle' => 'Tablet Collection 2026',
                     'button_label' => 'Shop Now',
                 ],
             ],
@@ -111,7 +111,7 @@ class AdsSeeder extends ThemeSeeder
                 'url' => $products[2]->url,
                 'metadata' => [
                     'title' => 'Samsung Galaxy Tab S6, Wifi Tablet',
-                    'subtitle' => 'Tablet Collection 2023',
+                    'subtitle' => 'Tablet Collection 2026',
                     'button_label' => 'Shop Now',
                 ],
             ],

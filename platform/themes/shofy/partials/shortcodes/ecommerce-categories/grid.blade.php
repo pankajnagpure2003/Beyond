@@ -16,7 +16,11 @@
                         @endif
                     >
                         <a href="{{ $category->url }}" title="{{ $category->name }}" class="tp-category-main-thumb transition-3">
-                            {{ RvMedia::image($category->{$imageField}, $category->name) }}
+                            @if ($shortcode->category_banner)
+                                <img src="{{ Theme::asset()->url($shortcode->category_banner) }}" alt="{{ $category->name }}" loading="lazy">
+                            @else
+                                {{ RvMedia::image($category->{$imageField}, $category->name) }}
+                            @endif
                         </a>
                         <div class="tp-category-main-content">
                             <h3 class="tp-category-main-title">

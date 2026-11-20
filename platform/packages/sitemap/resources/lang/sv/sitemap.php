@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Flera sökmotorer',
         'benefit_reliable' => 'Modernt, pålitligt protokoll',
         'about_google' => 'Om Google',
-        'google_note' => 'Google avvecklade sin webbplatskarte-ping-tjänst i juni 2023 och förlitar sig nu på naturlig crawling och lastmod-taggar.',
+        'google_note' => 'Google avvecklade sin webbplatskarte-ping-tjänst i juni 2026 och förlitar sig nu på naturlig crawling och lastmod-taggar.',
         'sitemap_info_title' => 'Hur webbplatskartan fungerar',
         'sitemap_info_description' => 'Din webbplatskarta genereras och uppdateras automatiskt när innehållet ändras. Det hjälper sökmotorer att upptäcka och indexera ditt webbplatsinnehåll mer effektivt.',
         'sitemap_url' => 'Webbplatskarta URL',

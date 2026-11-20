@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Több keresőmotor',
         'benefit_reliable' => 'Modern, megbízható protokoll',
         'about_google' => 'A Google-ról',
-        'google_note' => 'A Google 2023 júniusában megszüntette oldaltérkép ping szolgáltatását, és most a természetes bejárásra és a lastmod címkékre támaszkodik.',
+        'google_note' => 'A Google 2026 júniusában megszüntette oldaltérkép ping szolgáltatását, és most a természetes bejárásra és a lastmod címkékre támaszkodik.',
         'sitemap_info_title' => 'Hogyan működik az oldaltérkép',
         'sitemap_info_description' => 'Az oldaltérképe automatikusan generálódik és frissül, amikor a tartalom megváltozik. Segíti a keresőmotorokat a weboldal tartalmának hatékonyabb felfedezésében és indexelésében.',
         'sitemap_url' => 'Oldaltérkép URL',

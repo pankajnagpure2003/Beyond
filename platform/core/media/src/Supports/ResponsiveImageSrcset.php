@@ -39,6 +39,10 @@ class ResponsiveImageSrcset
             return null;
         }
 
+        if (! setting('media_enable_thumbnail_sizes', true)) {
+            return null;
+        }
+
         if (str_starts_with($originalUrl, 'http://') || str_starts_with($originalUrl, 'https://') || str_starts_with($originalUrl, 'data:')) {
             return null;
         }

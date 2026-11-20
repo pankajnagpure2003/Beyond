@@ -20,6 +20,10 @@
             window.themeOptions.ecommerce_auto_open_mini_cart = '{{ theme_option('ecommerce_auto_open_mini_cart', 'yes') }}';
         </script>
 
+        @if (! auth('customer')->check() && ! auth()->check())
+            {!! Theme::partial('auth-required-modal') !!}
+        @endif
+
         {!! Theme::footer() !!}
     </body>
 </html>

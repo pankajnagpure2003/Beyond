@@ -77,7 +77,7 @@ return [
         'benefit_multiple' => '複数の検索エンジン',
         'benefit_reliable' => '最新の信頼性の高いプロトコル',
         'about_google' => 'Googleについて',
-        'google_note' => 'Googleは2023年6月にサイトマップ送信サービスを廃止し、現在は自然なクロールとlastmodタグに依存しています。',
+        'google_note' => 'Googleは2026年6月にサイトマップ送信サービスを廃止し、現在は自然なクロールとlastmodタグに依存しています。',
         'sitemap_info_title' => 'サイトマップの動作方法',
         'sitemap_info_description' => 'サイトマップは自動的に生成され、コンテンツが変更されるたびに更新されます。これにより検索エンジンがウェブサイトのコンテンツをより効率的に発見し、インデックス化できるようになります。',
         'sitemap_url' => 'サイトマップURL',

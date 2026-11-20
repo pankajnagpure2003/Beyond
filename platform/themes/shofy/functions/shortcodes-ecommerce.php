@@ -951,4 +951,16 @@ app()->booted(function (): void {
                 SliderAutoplayFieldOption::make()
             );
     });
+
+    try {
+        Shortcode::ignoreCaches([
+            'ecommerce-products',
+            'ecommerce-product-groups',
+            'ecommerce-flash-sale',
+            'ecommerce-categories',
+            'ecommerce-brands',
+            'ecommerce-coupons',
+        ]);
+    } catch (Throwable) {
+    }
 });

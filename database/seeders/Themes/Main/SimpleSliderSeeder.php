@@ -54,7 +54,7 @@ class SimpleSliderSeeder extends ThemeSeeder
                 'description' => 'The main slider on homepage',
                 'children' => [
                     [
-                        'title' => 'The best tablet Collection 2023',
+                        'title' => 'The best tablet Collection 2026',
                         'description' => 'Exclusive offer <span>-35%</span> off this week',
                         'image' => $this->filePath('sliders/slider-1.png'),
                         'metadata' => [
@@ -65,7 +65,7 @@ class SimpleSliderSeeder extends ThemeSeeder
                         ],
                     ],
                     [
-                        'title' => 'The best note book collection 2023',
+                        'title' => 'The best note book collection 2026',
                         'description' => 'Exclusive offer <span>-10%</span> off this week',
                         'image' => $this->filePath('sliders/slider-3.png'),
                         'metadata' => [
@@ -76,7 +76,7 @@ class SimpleSliderSeeder extends ThemeSeeder
                         ],
                     ],
                     [
-                        'title' => 'The best phone collection 2023',
+                        'title' => 'The best phone collection 2026',
                         'description' => 'Exclusive offer <span>-10%</span> off this week',
                         'image' => $this->filePath('sliders/slider-2.png'),
                         'metadata' => [

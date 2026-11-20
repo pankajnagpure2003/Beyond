@@ -25,7 +25,7 @@ class TagController extends BaseApiController
      *       "name": "Laravel",
      *       "slug": "laravel",
      *       "description": "PHP Framework for web development",
-     *       "created_at": "2023-01-01T00:00:00.000000Z"
+     *       "created_at": "2026-01-01T00:00:00.000000Z"
      *     }
      *   ],
      *   "message": null

@@ -17,7 +17,7 @@ class SimpleSliderSeeder extends MainSimpleSliderSeeder
                 'children' => [
                     [
                         'title' => 'The Clothing Collection',
-                        'description' => 'New Arrivals 2023',
+                        'description' => 'New Arrivals 2026',
                         'image' => $this->filePath('sliders/slider-1.jpg'),
                         'metadata' => [
                             'button_label' => 'Shop Collection',
@@ -25,7 +25,7 @@ class SimpleSliderSeeder extends MainSimpleSliderSeeder
                     ],
                     [
                         'title' => 'The Summer Collection',
-                        'description' => 'Best Selling 2023',
+                        'description' => 'Best Selling 2026',
                         'image' => $this->filePath('sliders/slider-2.jpg'),
                         'metadata' => [
                             'button_label' => 'Shop Collection',

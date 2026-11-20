@@ -36,10 +36,20 @@ class BlogSeeder extends ThemeSeeder
         ]));
 
         $this->createBlogPosts(array_map(function ($post) {
+            $image = match ($post) {
+                'Build a Better Design Process: Tips for Creative Work' => $this->filePath('blog/follow-your-own-design-process.png'),
+                'Freelancing Today: Trends, Tools, and Opportunities' => $this->filePath('blog/freelancer-today.png'),
+                'Smart Shopping: How to Find the Best Deals Online' => $this->filePath('blog/shopping-deals.png'),
+                'Here’s the First Valentino’s New Makeup Collection' => $this->filePath('blog/valentino-makeup-collection.png'),
+                'Fully Embrace the Return of 90s fashion' => $this->filePath('blog/90s-fashion-trends.png'),
+                'Exploring the English Countryside' => $this->filePath('blog/english-countryside.png'),
+                default => $this->filePath(sprintf('blog/post-%s.jpg', rand(1, 12))),
+            };
+
             return [
                 'name' => $post,
                 'content' => File::get(database_path('seeders/contents/post.html')),
-                'image' => $this->filePath(sprintf('blog/post-%s.jpg', rand(1, 12))),
+                'image' => $image,
             ];
         }, [
             '4 Expert Tips On How To Choose The Right Men’s Wallet',
@@ -57,9 +67,9 @@ class BlogSeeder extends ThemeSeeder
             'Fully Embrace the Return of 90s fashion',
             'Exploring the English Countryside',
             'Here’s the First Valentino’s New Makeup Collection',
-            'Follow Your own Design process, whatever gets',
-            'Freelancer Days 2024, What’s new?',
-            'Quality Foods Requirments For Every Human Body’s',
+            'Build a Better Design Process: Tips for Creative Work',
+            'Freelancing Today: Trends, Tools, and Opportunities',
+            'Smart Shopping: How to Find the Best Deals Online',
         ]));
     }
 }

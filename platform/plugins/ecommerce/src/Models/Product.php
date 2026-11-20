@@ -36,6 +36,7 @@ use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Database\Query\JoinClause;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
@@ -169,6 +170,13 @@ class Product extends BaseModel
         static::creating(function (Product $product): void {
             $product->created_by_id = Auth::check() ? Auth::id() : 0;
             $product->created_by_type = User::class;
+        });
+
+        static::saved(function (Product $product): void {
+            try {
+                Cache::flush();
+            } catch (Throwable) {
+            }
         });
 
         static::deleting(function (Product $product): void {
@@ -478,6 +486,10 @@ class Product extends BaseModel
 
                 if ($this->is_variation) {
                     return $firstImage;
+                }
+
+                if ($value && ! empty($this->images) && ! in_array($value, $this->images)) {
+                    return $firstImage ?: $value;
                 }
 
                 return $value ?: $firstImage;

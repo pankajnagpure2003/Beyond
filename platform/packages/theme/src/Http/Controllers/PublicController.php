@@ -74,7 +74,7 @@ class PublicController extends BaseController
             $key = Str::replaceLast($extension, '', $key);
         }
 
-        if ($result instanceof BaseHttpResponse) {
+        if ($result instanceof BaseHttpResponse || $result instanceof \Symfony\Component\HttpFoundation\Response) {
             return $result;
         }
 

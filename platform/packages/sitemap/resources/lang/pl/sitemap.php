@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Wiele wyszukiwarek',
         'benefit_reliable' => 'Nowoczesny, niezawodny protokół',
         'about_google' => 'O Google',
-        'google_note' => 'Google wycofał usługę pingowania map witryn w czerwcu 2023 r. i teraz polega na naturalnym indeksowaniu i tagach lastmod.',
+        'google_note' => 'Google wycofał usługę pingowania map witryn w czerwcu 2026 r. i teraz polega na naturalnym indeksowaniu i tagach lastmod.',
         'sitemap_info_title' => 'Jak działa mapa witryny',
         'sitemap_info_description' => 'Mapa witryny jest automatycznie generowana i aktualizowana przy każdej zmianie treści. Pomaga wyszukiwarkom bardziej efektywnie odkrywać i indeksować zawartość witryny.',
         'sitemap_url' => 'URL mapy witryny',

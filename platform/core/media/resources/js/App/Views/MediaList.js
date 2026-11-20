@@ -129,10 +129,12 @@ export class MediaList {
             if (Helpers.getRequestParams().view_type === 'list') {
                 item = item.replace(/__thumb__/gi, value.icon)
             } else {
+                const thumbnail = value.thumb || (value.type === 'image' ? value.full_url : null)
+
                 item = item.replace(
                     /__thumb__/gi,
-                    value.thumb
-                        ? `<img src="${value.thumb ? value.thumb : value.full_url}" alt="${value.name}">`
+                    thumbnail
+                        ? `<img src="${thumbnail}" alt="${value.name}">`
                         : value.icon
                 )
             }

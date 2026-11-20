@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => '多个搜索引擎',
         'benefit_reliable' => '现代、可靠的协议',
         'about_google' => '关于 Google',
-        'google_note' => 'Google 在 2023 年 6 月停止了网站地图 ping 服务，现在依赖自然抓取和 lastmod 标签。',
+        'google_note' => 'Google 在 2026 年 6 月停止了网站地图 ping 服务，现在依赖自然抓取和 lastmod 标签。',
         'sitemap_info_title' => '网站地图如何工作',
         'sitemap_info_description' => '您的网站地图会在内容更改时自动生成和更新。它帮助搜索引擎更有效地发现和索引您网站的内容。',
         'sitemap_url' => '网站地图 URL',

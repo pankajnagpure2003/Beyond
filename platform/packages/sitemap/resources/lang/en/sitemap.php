@@ -77,7 +77,7 @@ return [
         'benefit_multiple' => 'Multiple search engines',
         'benefit_reliable' => 'Modern, reliable protocol',
         'about_google' => 'About Google',
-        'google_note' => 'Google deprecated their sitemap ping service in June 2023 and now relies on natural crawling and lastmod tags.',
+        'google_note' => 'Google deprecated their sitemap ping service in June 2026 and now relies on natural crawling and lastmod tags.',
         'sitemap_info_title' => 'How Sitemap Works',
         'sitemap_info_description' => 'Your sitemap is automatically generated and updated whenever content changes. It helps search engines discover and index your website content more efficiently.',
         'sitemap_url' => 'Sitemap URL',

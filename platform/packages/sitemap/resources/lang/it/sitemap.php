@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Più motori di ricerca',
         'benefit_reliable' => 'Protocollo moderno e affidabile',
         'about_google' => 'Riguardo Google',
-        'google_note' => 'Google ha deprecato il suo servizio di ping delle mappe del sito a giugno 2023 e ora si affida alla scansione naturale e ai tag lastmod.',
+        'google_note' => 'Google ha deprecato il suo servizio di ping delle mappe del sito a giugno 2026 e ora si affida alla scansione naturale e ai tag lastmod.',
         'sitemap_info_title' => 'Come funziona la mappa del sito',
         'sitemap_info_description' => 'La tua mappa del sito viene generata e aggiornata automaticamente ogni volta che il contenuto cambia. Aiuta i motori di ricerca a scoprire e indicizzare i contenuti del tuo sito web in modo più efficiente.',
         'sitemap_url' => 'URL mappa del sito',

@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Kelios paieškos sistemos',
         'benefit_reliable' => 'Modernus, patikimas protokolas',
         'about_google' => 'Apie Google',
-        'google_note' => 'Google nutraukė svetainės struktūrų pingavimo paslaugą 2023 m. birželį ir dabar pasikliauja natūraliu šliaužimu ir lastmod žymomis.',
+        'google_note' => 'Google nutraukė svetainės struktūrų pingavimo paslaugą 2026 m. birželį ir dabar pasikliauja natūraliu šliaužimu ir lastmod žymomis.',
         'sitemap_info_title' => 'Kaip veikia svetainės struktūra',
         'sitemap_info_description' => 'Jūsų svetainės struktūra automatiškai generuojama ir atnaujinama, kai keičiasi turinys. Ji padeda paieškos sistemoms efektyviau atrasti ir indeksuoti jūsų svetainės turinį.',
         'sitemap_url' => 'Svetainės struktūros URL',

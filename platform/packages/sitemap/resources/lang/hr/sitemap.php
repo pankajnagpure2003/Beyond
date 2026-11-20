@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Više tražilica',
         'benefit_reliable' => 'Moderni, pouzdani protokol',
         'about_google' => 'O Google',
-        'google_note' => 'Google je ukinuo svoju uslugu pinganja mapa web stranica u lipnju 2023. i sada se oslanja na prirodno indeksiranje i lastmod oznake.',
+        'google_note' => 'Google je ukinuo svoju uslugu pinganja mapa web stranica u lipnju 2026. i sada se oslanja na prirodno indeksiranje i lastmod oznake.',
         'sitemap_info_title' => 'Kako funkcionira mapa web stranice',
         'sitemap_info_description' => 'Vaša mapa web stranice automatski se generira i ažurira kad god se sadržaj promijeni. Pomaže tražilicama da učinkovitije otkrivaju i indeksiraju sadržaj vaše web stranice.',
         'sitemap_url' => 'URL mape web stranice',

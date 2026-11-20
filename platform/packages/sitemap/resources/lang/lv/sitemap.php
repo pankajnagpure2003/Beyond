@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Vairākas meklētājprogrammas',
         'benefit_reliable' => 'Moderns, uzticams protokols',
         'about_google' => 'Par Google',
-        'google_note' => 'Google 2023. gada jūnijā pārtrauca vietnes karšu pingošanas pakalpojumu un tagad paļaujas uz dabisko pārlūkošanu un lastmod tagiem.',
+        'google_note' => 'Google 2026. gada jūnijā pārtrauca vietnes karšu pingošanas pakalpojumu un tagad paļaujas uz dabisko pārlūkošanu un lastmod tagiem.',
         'sitemap_info_title' => 'Kā darbojas vietnes karte',
         'sitemap_info_description' => 'Jūsu vietnes karte tiek automātiski ģenerēta un atjaunināta, kad mainās saturs. Tā palīdz meklētājprogrammām efektīvāk atklāt un indeksēt jūsu vietnes saturu.',
         'sitemap_url' => 'Vietnes kartes URL',

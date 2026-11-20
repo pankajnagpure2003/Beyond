@@ -33,7 +33,14 @@ class GallerySeeder extends ThemeSeeder
                 'user_id' => 1,
                 'name' => $item,
                 'description' => Arr::random($descriptions),
-                'image' => $this->filePath(sprintf('galleries/%d.jpg', $index + 1)),
+                'image' => match ($index) {
+                    0 => $this->filePath('galleries/home-gallery-first.png'),
+                    1 => $this->filePath('galleries/new-day-gallery.png'),
+                    2 => $this->filePath('galleries/happy-day-item.png'),
+                    3 => $this->filePath('galleries/nature-gallery.png'),
+                    4 => $this->filePath('galleries/morning-gallery.png'),
+                    default => $this->filePath(sprintf('galleries/%d.jpg', $index + 1)),
+                },
                 'is_featured' => true,
             ]);
 

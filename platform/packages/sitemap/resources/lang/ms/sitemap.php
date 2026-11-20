@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Pelbagai enjin carian',
         'benefit_reliable' => 'Protokol moden yang boleh dipercayai',
         'about_google' => 'Tentang Google',
-        'google_note' => 'Google telah menghentikan perkhidmatan ping peta laman mereka pada Jun 2023 dan kini bergantung pada perayapan semula jadi dan tag lastmod.',
+        'google_note' => 'Google telah menghentikan perkhidmatan ping peta laman mereka pada Jun 2026 dan kini bergantung pada perayapan semula jadi dan tag lastmod.',
         'sitemap_info_title' => 'Cara Peta Laman Berfungsi',
         'sitemap_info_description' => 'Peta laman anda dijana dan dikemas kini secara automatik apabila kandungan berubah. Ia membantu enjin carian menemui dan mengindeks kandungan laman web anda dengan lebih cekap.',
         'sitemap_url' => 'URL Peta Laman',

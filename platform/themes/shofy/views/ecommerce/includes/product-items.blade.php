@@ -23,7 +23,10 @@
         <div @class(['row mb-30', 'row-cols-xxl-' . $itemsPerRow, 'row-cols-md-' . ($itemsPerRow - 1), 'row-cols-sm-' . $itemsPerRowOnMobile, 'row-cols-' . $itemsPerRowOnMobile, 'bb-infinite-products-grid' => $isInfiniteScroll])>
             @foreach ($products as $product)
                 <div class="col">
-                    @include(Theme::getThemeNamespace('views.ecommerce.includes.product-item'), ['layout' => 'grid'])
+                    @include(
+                        Theme::getThemeNamespace('views.ecommerce.includes.product-item'),
+                        ['layout' => 'grid', 'productImageOverride' => $productImageOverride ?? null]
+                    )
                 </div>
             @endforeach
         </div>

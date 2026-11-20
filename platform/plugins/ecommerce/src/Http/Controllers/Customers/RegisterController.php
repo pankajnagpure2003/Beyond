@@ -42,7 +42,12 @@ class RegisterController extends BaseController
 
         Theme::breadcrumb()->add($title, route('customer.register'));
 
-        if (! session()->has('url.intended') &&
+        if ($redirect = request()->query('redirect')) {
+            $currentHost = parse_url(url()->current(), PHP_URL_HOST);
+            if ($redirect !== route('customer.register') && parse_url($redirect, PHP_URL_HOST) === $currentHost) {
+                session(['url.intended' => $redirect]);
+            }
+        } elseif (! session()->has('url.intended') &&
             ! in_array(url()->previous(), [route('customer.login'), route('customer.register')])
         ) {
             session(['url.intended' => url()->previous()]);

@@ -87,11 +87,11 @@ class PageSeeder extends ThemeSeeder
                     '[ecommerce-product-groups title="Trending Products" limit="8" tabs="all,featured,on-sale,trending,top-rated" enable_lazy_loading="yes"][/ecommerce-product-groups]' .
                     '[ads style="1" key_1="UROL9F9ZZVAA" key_2="B30VDBKO7SBF" enable_lazy_loading="yes"][/ads]' .
                     '[ecommerce-flash-sale style="1" title="Deal of The Day" flash_sale_id="1" limit="4" button_label="View All Deals" button_url="/products" enable_lazy_loading="yes"][/ecommerce-flash-sale]' .
-                    '[ecommerce-products style="grid" category_ids="20" limit="12" with_sidebar="1" image="main/gadgets/gadget-girl.png" action_label="More Products" ads_ids="3,4" enable_lazy_loading="yes"][/ecommerce-products]' .
+                    '[ecommerce-products style="grid" category_ids="20" limit="12" with_sidebar="1" image="main/gadgets/electronics-products-thumbnail.png" action_label="More Products" ads_ids="3,4" enable_lazy_loading="yes"][/ecommerce-products]' .
                     '[ads style="4" key_1="B5ZA76ZWMWAE" key_2="F1LTQS976YPY" key_3="IHPZ2WBSYJUK" enable_lazy_loading="yes"][/ads]' .
                     '[ecommerce-products style="slider" title="New Arrivals" by="collection" collection_ids="1" limit="12" enable_lazy_loading="yes"][/ecommerce-products]' .
                     '[ecommerce-product-groups style="columns" limit="3" tabs="on-sale,trending,top-rated" enable_lazy_loading="yes"][/ecommerce-product-groups]' .
-                    '[blog-posts title="Latest news & articles" type="latest" limit="3" button_label="View All" button_url="/blog" enable_lazy_loading="yes"][/blog-posts]' .
+                    '[blog-posts title="Latest news & articles" type="latest" limit="6" button_label="View All" button_url="/blog" enable_lazy_loading="yes"][/blog-posts]' .
                     '[gallery style="1" limit="5" enable_lazy_loading="yes"][/gallery]',
                 'template' => 'full-width',
                 'metadata' => [

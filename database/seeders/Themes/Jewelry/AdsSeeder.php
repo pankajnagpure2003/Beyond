@@ -16,7 +16,7 @@ class AdsSeeder extends MainAdsSeeder
                 'image' => $this->filePath('banners/1.jpg'),
                 'url' => '/products',
                 'metadata' => [
-                    'title' => "Ardeco pearl \n Rings style 2023",
+                    'title' => "Ardeco pearl \n Rings style 2026",
                     'subtitle' => 'Collection',
                     'button_label' => 'Shop Now',
                 ],

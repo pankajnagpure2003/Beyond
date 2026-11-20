@@ -26,7 +26,7 @@ class PageController extends BaseApiController
      *       "title": "About Us",
      *       "slug": "about-us",
      *       "content": "This is the about us page content...",
-     *       "published_at": "2023-01-01T00:00:00.000000Z"
+     *       "published_at": "2026-01-01T00:00:00.000000Z"
      *     }
      *   ],
      *   "message": null
@@ -59,7 +59,7 @@ class PageController extends BaseApiController
      *     "title": "About Us",
      *     "slug": "about-us",
      *     "content": "This is the about us page content...",
-     *     "published_at": "2023-01-01T00:00:00.000000Z"
+     *     "published_at": "2026-01-01T00:00:00.000000Z"
      *   },
      *   "message": null
      * }

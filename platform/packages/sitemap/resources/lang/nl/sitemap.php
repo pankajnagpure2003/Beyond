@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Meerdere zoekmachines',
         'benefit_reliable' => 'Modern, betrouwbaar protocol',
         'about_google' => 'Over Google',
-        'google_note' => 'Google heeft hun sitemap ping service in juni 2023 stopgezet en vertrouwt nu op natuurlijke crawling en lastmod tags.',
+        'google_note' => 'Google heeft hun sitemap ping service in juni 2026 stopgezet en vertrouwt nu op natuurlijke crawling en lastmod tags.',
         'sitemap_info_title' => 'Hoe Sitemap Werkt',
         'sitemap_info_description' => 'Uw sitemap wordt automatisch gegenereerd en bijgewerkt wanneer inhoud verandert. Het helpt zoekmachines uw website inhoud efficiënter te ontdekken en indexeren.',
         'sitemap_url' => 'Sitemap URL',

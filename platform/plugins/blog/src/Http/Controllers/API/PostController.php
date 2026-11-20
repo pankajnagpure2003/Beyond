@@ -36,7 +36,7 @@ class PostController extends BaseApiController
      *       "slug": "sample-post",
      *       "excerpt": "This is a sample post excerpt",
      *       "content": "Full post content here...",
-     *       "published_at": "2023-01-01T00:00:00.000000Z",
+     *       "published_at": "2026-01-01T00:00:00.000000Z",
      *       "author": {
      *         "id": 1,
      *         "name": "John Doe"

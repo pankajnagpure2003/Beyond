@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Birden fazla arama motoru',
         'benefit_reliable' => 'Modern, güvenilir protokol',
         'about_google' => 'Google Hakkında',
-        'google_note' => 'Google, site haritası ping hizmetini Haziran 2023\'te kullanımdan kaldırdı ve artık doğal tarama ve lastmod etiketlerine güveniyor.',
+        'google_note' => 'Google, site haritası ping hizmetini Haziran 2026\'te kullanımdan kaldırdı ve artık doğal tarama ve lastmod etiketlerine güveniyor.',
         'sitemap_info_title' => 'Site Haritası Nasıl Çalışır?',
         'sitemap_info_description' => 'Site haritanız içerik değiştiğinde otomatik olarak oluşturulur ve güncellenir. Arama motorlarının web sitesi içeriğinizi daha verimli bir şekilde keşfetmesine ve dizine eklemesine yardımcı olur.',
         'sitemap_url' => 'Site Haritası URL\'si',

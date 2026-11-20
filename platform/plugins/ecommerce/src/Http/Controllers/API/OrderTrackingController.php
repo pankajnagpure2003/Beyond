@@ -69,8 +69,8 @@ class OrderTrackingController extends BaseApiController
      *             "discount_amount": 0.00,
      *             "payment_id": 1,
      *             "user_id": 1,
-     *             "created_at": "2023-08-10T12:34:56.000000Z",
-     *             "updated_at": "2023-08-10T12:34:56.000000Z",
+     *             "created_at": "2026-08-10T12:34:56.000000Z",
+     *             "updated_at": "2026-08-10T12:34:56.000000Z",
      *             "address": {
      *                 "id": 1,
      *                 "name": "John Doe",
@@ -95,7 +95,7 @@ class OrderTrackingController extends BaseApiController
      *                     "id": 1,
      *                     "action": "create_order",
      *                     "description": "Order was created",
-     *                     "created_at": "2023-08-10T12:34:56.000000Z"
+     *                     "created_at": "2026-08-10T12:34:56.000000Z"
      *                 }
      *             ],
      *             "shipment": {

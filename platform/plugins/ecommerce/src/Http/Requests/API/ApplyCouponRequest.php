@@ -22,7 +22,7 @@ class ApplyCouponRequest extends Request
         return [
             'coupon_code' => [
                 'description' => 'The coupon code to apply',
-                'example' => 'SUMMER2023',
+                'example' => 'SUMMER2026',
             ],
             'cart_id' => [
                 'description' => 'The ID of the cart to apply the coupon to',

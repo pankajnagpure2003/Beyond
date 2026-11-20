@@ -67,7 +67,7 @@ return [
         'benefit_multiple' => 'Več iskalnikov',
         'benefit_reliable' => 'Sodoben, zanesljiv protokol',
         'about_google' => 'O Google',
-        'google_note' => 'Google je junija 2023 opustil storitev pinganja zemljevidov spletnih mest in se zdaj zanaša na naravno indeksiranje in oznake lastmod.',
+        'google_note' => 'Google je junija 2026 opustil storitev pinganja zemljevidov spletnih mest in se zdaj zanaša na naravno indeksiranje in oznake lastmod.',
         'sitemap_info_title' => 'Kako deluje zemljevid spletnega mesta',
         'sitemap_info_description' => 'Vaš zemljevid spletnega mesta se samodejno ustvari in posodobi, ko se vsebina spremeni. Pomaga iskalnikom bolj učinkovito odkrivati in indeksirati vsebino spletnega mesta.',
         'sitemap_url' => 'URL zemljevida spletnega mesta',
